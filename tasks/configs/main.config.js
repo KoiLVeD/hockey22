@@ -9,7 +9,10 @@ let config = {
     preprocessor : 'sass',
     isDevelopment: !process.env.NODE_ENV || process.env.NODE_ENV === 'development',
     postcssConfig: [
-        autoprefixer({ browsers: ['last 2 versions'] }),
+        autoprefixer({
+          overrideBrowserslist:  ['last 2 versions'],
+          cascade: false
+        }),
         assets({
             baseUrl  : '/',
             loadPaths: ['svg-icons/', 'images/']

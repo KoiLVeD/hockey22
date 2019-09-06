@@ -29,6 +29,8 @@ const plugins = isDevelopment ? pluginsDev : pluginsProd;
 module.exports = {
     watch: isDevelopment,
 
+    mode: isDevelopment ? 'development' : 'production',
+
     entry: config.paths.entry,
 
     devtool: isDevelopment ? 'eval' : 'hidden-source-map', // settings source-map
