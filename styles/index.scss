@@ -4,14 +4,7 @@
 SERVICE
  */
 @import 'service/index';
-
 @import 'common';
-
-
-/**
-EL
- */
-@import 'element/index';
 
 /**
 BLOCKS
@@ -28,14 +21,15 @@ PLUGINS
  */
 @import 'plugins/index';
 
-
-
-
-
 /**
 PAGES
  */
 @import 'pages/index';
+
+/**
+EL
+ */
+@import 'element/index';
 
 
 

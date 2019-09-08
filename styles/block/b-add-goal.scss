@@ -1,0 +1,132 @@
+.b-add-goal {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: $white;
+
+
+  @include bp($bp-414) {
+    padding: 20px 15px;
+  }
+}
+
+.b-add-goal__box {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.b-add-goal__tabs {
+  margin-bottom: 20px;
+
+  input {
+    position: absolute;
+    z-index: -99;
+    visibility: hidden;
+
+    &:checked {
+      & + label {
+        @extend .tab__item--active
+      }
+    }
+  }
+}
+
+.b-add-goal__tabs--long {
+  .tab__item {
+    width: 135px;
+  }
+}
+
+.b-add-goal__tabs--radio {
+  .tab__item {
+    width: 84px;
+    margin: 0 -1px;
+
+    &:nth-child(2) {
+      border-radius: 23px 0 0 23px;
+    }
+  }
+}
+
+.b-add-goal__control {
+  margin-top: 20px;
+  h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.b-add-goal__checkbox {
+  margin-bottom: 20px;
+
+  input {
+    position: absolute;
+    visibility: hidden;
+    z-index: -99;
+
+    &:checked {
+      & + label {
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 7px;
+          left: 7px;
+          @include svg-checked-blue;
+          z-index: 10;
+        }
+      }
+    }
+  }
+
+  label {
+    position: relative;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 30px;
+    color: $black;
+    padding-left: 40px;
+    margin: 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      border: solid 1px #dcdcdc;
+      background-color: $white;
+    }
+  }
+}
+
+.b-add-goal__btn {
+  text-align: center;
+}
+
+.b-add-goal__form{
+  .selectbox {
+    margin-bottom: 10px;
+  }
+  .b-form__item {
+    position: relative;
+    input {
+      border: solid 1px #dcdcdc;
+      padding-right: 120px;
+    }
+
+    span {
+      position: absolute;
+      top: 18px;
+      right: 16px;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: normal;
+      color: $brown-grey;
+    }
+  }
+}

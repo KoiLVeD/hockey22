@@ -1,0 +1,36 @@
+.tab {
+  display: flex;
+  justify-content: center;
+}
+
+.tab__item {
+  height: 40px;
+  border: solid 2px $cornflower-blue;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  color: $cornflower-blue;
+  text-align: center;
+  transition: .3s ease-in-out all;
+  cursor: pointer;
+
+  &:first-child {
+    border-radius: 23px 0 0 23px;
+  }
+  &:last-child {
+    border-radius: 0 23px 23px 0;
+  }
+}
+
+.tab__item--active {
+  background-color: $cornflower-blue;
+  color: $white;
+}
+
+.tab-content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

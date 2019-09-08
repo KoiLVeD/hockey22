@@ -1,0 +1,29 @@
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 34px;
+  color: $white;
+  border-radius: 23px;
+  border-width: 2px;
+  border-style: solid;
+  height: 40px;
+  padding: 0 22px;
+  cursor: pointer;
+}
+
+.btn--yellow {
+  border-color: $butterscotch;
+  background-color: $butterscotch;
+}
+
+.btn--blue {
+  border-color: $cornflower-blue;
+  background-color: $cornflower-blue;
+}
+
+.btn--border {
+  &.btn--blue {
+    color: $cornflower-blue;
+    background-color: $white;
+  }
+}

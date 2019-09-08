@@ -4,40 +4,40 @@ const flexbugs = require('postcss-flexbugs-fixes');
 const assets = require('postcss-assets');
 
 let config = {
-    API          : '',
-    tasks        : './tasks',
-    preprocessor : 'sass',
-    isDevelopment: !process.env.NODE_ENV || process.env.NODE_ENV === 'development',
-    postcssConfig: [
-        autoprefixer({
-          overrideBrowserslist:  ['last 2 versions'],
-          cascade: false
-        }),
-        assets({
-            baseUrl  : '/',
-            loadPaths: ['svg-icons/', 'images/']
-        }),
-        inlineSvg(),
-        flexbugs()
-    ],
-    paths: {
-        // JS
-        entry: {
-            index: './js/index.js'
-        },
-        js        : './js/**/**/*.{js,jsx}',
-        // SVG
-        svg_sprite: './svg-sprite/**/*.svg',
-        // DIST
-        dist      : './public'
+  API: '',
+  tasks: './tasks',
+  preprocessor: 'sass',
+  isDevelopment: !process.env.NODE_ENV || process.env.NODE_ENV === 'development',
+  postcssConfig: [
+    autoprefixer({
+      overrideBrowserslist: ['last 2 versions'],
+      cascade: false
+    }),
+    assets({
+      baseUrl: '/',
+      loadPaths: ['svg-icons/', 'images/']
+    }),
+    inlineSvg(),
+    flexbugs()
+  ],
+  paths: {
+    // JS
+    entry: {
+      index: './js/index.js'
     },
-    output: {
-        js    : 'js',
-        css   : 'css',
-        images: 'images',
-        svg   : 'svg',
-        sprite: 'images'
-    }
+    js: './js/**/**/*.{js,jsx}',
+    // SVG
+    svg_sprite: './svg-sprite/**/*.svg',
+    // DIST
+    dist: './public'
+  },
+  output: {
+    js: 'js',
+    css: 'css',
+    images: 'images',
+    svg: 'svg',
+    sprite: 'images'
+  }
 };
 // STYLES
 config.paths.styles = config.preprocessor === 'sass' ? ['./styles/**/*.scss', './styles/**/*.css'] : ['./styles/**.less', './styles/layout/**.less', './styles/pages/**.less', './styles/plugins/**.less', './styles/service/**.less'];

@@ -1,0 +1,120 @@
+extends _layout
+
+block title
+    title Главная страница
+block content
+    .admin-page
+        .container
+            .b-add-goal
+                .b-add-goal__box.js-tab
+                    .b-add-goal__tabs.b-add-goal__tabs--long
+                        .tab.js-tab-item
+                            .tab__item.tab__item--active СКИФ
+                            .tab__item ПРАЙ
+                    .b-add-goal__content.js-tab-content
+                        .tab-content.active
+                            .b-add-goal__form
+                                select.selectbox.js-choice
+                                    option(placeholder) Выберите игрока
+                                    option Игрок 1
+                                    option Игрок 2
+                                    option Игрок 3
+                                    option Игрок 4
+
+                                select.selectbox.js-choice
+                                    option Пас
+                                    option Пас
+                                    option Пас
+                                .b-form__item
+                                    span Время события
+                                    input(type='text' placeholder='00:00')
+
+                                .b-add-goal__control
+                                    h3 Период
+                                    .b-add-goal__tabs.b-add-goal__tabs--radio
+                                        .tab
+                                            input(id='p-1' type='radio' name='period' checked)
+                                            label(for='p-1').tab__item 1й
+                                            input(id='p-2' type='radio' name='period')
+                                            label(for='p-2').tab__item 2й
+                                            input(id='p-3' type='radio' name='period')
+                                            label(for='p-3').tab__item 3й
+                                            input(id='p-4' type='radio' name='period')
+                                            label(for='p-4').tab__item ОТ
+                                            input(id='p-5' type='radio' name='period')
+                                            label(for='p-5').tab__item Б
+
+                                    h3 Игровая ситуация
+                                    .b-add-goal__tabs.b-add-goal__tabs--radio
+                                        .tab
+                                            input(id='c-1' type='radio' name='count' checked)
+                                            label(for='c-1').tab__item -2
+                                            input(id='c-2' type='radio' name='count')
+                                            label(for='c-2').tab__item -1
+                                            input(id='c-3' type='radio' name='count')
+                                            label(for='c-3').tab__item 0
+                                            input(id='c-4' type='radio' name='count')
+                                            label(for='c-4').tab__item +1
+                                            input(id='c-5' type='radio' name='count')
+                                            label(for='c-5').tab__item +2
+
+
+
+
+                            .tab-content__item
+                        .tab-content
+                            .b-add-goal__form
+                                select.selectbox.js-choice
+                                    option(placeholder) Выберите игрока(2)
+                                    option Игрок 1
+                                    option Игрок 2
+                                    option Игрок 3
+                                    option Игрок 4
+                                    option Игрок 5
+                                select.selectbox.js-choice
+                                    option Пас
+                                    option Пас
+                                    option Пас
+                                .b-form__item
+                                    span Время события
+                                    input(type='text' placeholder='00:00')
+
+                                .b-add-goal__control
+                                    h3 Период
+                                    .b-add-goal__tabs.b-add-goal__tabs--radio
+                                        .tab
+                                            input(id='p-1_2' type='radio' name='period1')
+                                            label(for='p-1_2').tab__item 1й
+                                            input(id='p-2_2' type='radio' name='period1' checked)
+                                            label(for='p-2_2').tab__item 2й
+                                            input(id='p-3_2' type='radio' name='period1')
+                                            label(for='p-3_2').tab__item 3й
+                                            input(id='p-4_2' type='radio' name='period1')
+                                            label(for='p-4_2').tab__item ОТ
+                                            input(id='p-5_2' type='radio' name='period1')
+                                            label(for='p-5_2').tab__item Б
+
+                                    h3 Игровая ситуация
+                                    .b-add-goal__tabs.b-add-goal__tabs--radio
+                                        .tab
+                                            input(id='c-1_2' type='radio' name='count2')
+                                            label(for='c-1_2').tab__item -2
+                                            input(id='c-2_2' type='radio' name='count2' checked)
+                                            label(for='c-2_2').tab__item -1
+                                            input(id='c-3_2' type='radio' name='count2')
+                                            label(for='c-3_2').tab__item 0
+                                            input(id='c-4_2' type='radio' name='count2')
+                                            label(for='c-4_2').tab__item +1
+                                            input(id='c-5_2' type='radio' name='count2')
+                                            label(for='c-5_2').tab__item +2
+
+                    .b-add-goal__checkbox
+                        input(id='penalty' type='checkbox')
+                        label(for='penalty') Штрафной бросок
+                    .b-add-goal__btn
+                        button.btn.btn--yellow Добавить
+
+
+
+
+

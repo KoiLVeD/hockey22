@@ -123,8 +123,7 @@
             "error",
             {
                 "beforeColon": false,
-                "afterColon": true,
-                "align": "colon"
+                "afterColon": true
             }
         ],
         "keyword-spacing": [
