@@ -50,10 +50,12 @@
   margin-top: 20px;
   position: relative;
   text-align: center;
+
   .btn {
     position: relative;
     z-index: 10;
   }
+
   &:after {
     content: '';
     display: block;
@@ -125,12 +127,11 @@
   text-align: center;
 }
 
-.b-game__goal-edit {
+.b-game__goal-control {
   position: absolute;
   width: 24px;
   height: 24px;
   top: 0;
-  right: 17px;
   bottom: 0;
   margin: auto;
   z-index: 10;
@@ -139,14 +140,29 @@
   align-items: center;
   cursor: pointer;
 
-  @include bp($bp-414) {
+}
+
+.b-game__goal-control--edit {
+  right: 17px;
+  @include bp($bp-540) {
     bottom: auto;
-    top: 8px;
+    top: 5px;
     right: 8px;
   }
-
   span {
     @include svg-pencil-edit-button;
+  }
+}
+
+.b-game__goal-control--delete {
+  right: 58px;
+  @include bp($bp-540) {
+    top: auto;
+    bottom: 5px;
+    right: 8px;
+  }
+  span {
+    @include svg-delete--light-blue;
   }
 }
 
@@ -159,6 +175,7 @@
 }
 
 .b-game-list__item {
+  display: block;
   border-radius: 8px;
   background-color: $white;
   padding: 15px 20px;

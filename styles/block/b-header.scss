@@ -6,6 +6,37 @@
   height: 62px;
   z-index: 100;
 
+  &.active {
+    .b-header__btn-menu {
+      @include svg-delete;
+    }
+    .b-header__mobile-bg {
+      opacity: 1;
+      visibility: visible;
+    }
+    .b-header__circle-btn {
+      width: 1460px;
+      height: 1460px;
+      top: -560px;
+      left: -565px;
+      transition-delay: .2s;
+
+      @include bp($bp-ipad-768) {
+        width: 1200px;
+        height: 1200px;
+        top: -400px;
+        left: -400px;
+      }
+    }
+    .b-header__menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: .3s ease-in-out all;
+      transition-delay: .3s;
+    }
+  }
+
   .container {
     height: 100%;
   }
@@ -35,6 +66,7 @@
 .b-header__logo-symol {
   @include svg-logo-white;
 }
+
 .b-header__logo-text {
   @include svg-logo-text;
   margin-left: 19px;
@@ -65,10 +97,30 @@
     }
 
     a {
+      position: relative;
       font-size: 14px;
       font-weight: normal;
       line-height: normal;
       color: $white;
+
+      &:hover {
+        &:after {
+          width: 100%;
+          left: 0;
+          opacity: 1;
+        }
+      }
+      &:after {
+        width: 0;
+        left: 50%;
+        transition: all 0.25s ease-in-out;
+        height: 1px;
+        opacity: 0.2;
+        background-color: #fff;
+        position: absolute;
+        bottom: -5px;
+        content: '';
+      }
     }
   }
 
@@ -101,14 +153,6 @@
         font-weight: 500;
       }
     }
-
-    &.active {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
-      transition: .3s ease-in-out all;
-      transition-delay: .3s;
-    }
   }
 }
 
@@ -126,10 +170,6 @@
 
   @include bp($bp-ipad-1024) {
     display: block;
-  }
-
-  &.open {
-    @include svg-delete
   }
   //span {
   //  position: absolute;
@@ -163,22 +203,6 @@
   opacity:1;
   transition: all 0.3s ease-in-out;
   z-index: 100;
-
-
-  &.active {
-    width: 1460px;
-    height: 1460px;
-    top: -560px;
-    left: -565px;
-    transition-delay: .25s;
-
-    @include bp($bp-ipad-768) {
-      width: 1200px;
-      height: 1200px;
-      top: -400px;
-      left: -400px;
-    }
-  }
 }
 
 .b-header__mobile-bg {
@@ -192,12 +216,6 @@
   opacity: 0;
   visibility: hidden;
   transition: all .3s ease-in-out;
-
-
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
 }
 
 .b-header__exit {

@@ -17,11 +17,30 @@
     font-size: 14px;
     font-weight: normal;
     line-height: 50px;
-    color: $brown-grey;
+    color: $black;
     border-radius: 8px;
     background-color: $white;
     border: none;
     padding: 0 15px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $brown-grey;
+    }
+    &:-ms-input-placeholder {
+      color: $brown-grey;
+    }
+    &::-moz-placeholder {
+      color: $brown-grey;
+      opacity: 1;
+    }
+    &:-moz-placeholder {
+      color: $brown-grey;
+      opacity: 1;
+    }
   }
 }
 

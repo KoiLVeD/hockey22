@@ -9,11 +9,21 @@
   height: 40px;
   padding: 0 22px;
   cursor: pointer;
+  transition: .3s ease-in-out all;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .btn--yellow {
   border-color: $butterscotch;
   background-color: $butterscotch;
+
+  &:hover {
+    color: $butterscotch;
+    background-color: $white;
+  }
 }
 
 .btn--blue {
@@ -25,5 +35,10 @@
   &.btn--blue {
     color: $cornflower-blue;
     background-color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $cornflower-blue;
+    }
   }
 }
