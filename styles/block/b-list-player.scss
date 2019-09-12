@@ -1,0 +1,26 @@
+.b-list-player {
+
+}
+
+.b-list-player__control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  select {
+    width: 150px;
+  }
+  .selectbox {
+    width: 150px;
+  }
+}
+
+.b-list-player__list {
+  .player {
+    &:not(:first-child) {
+      margin-top: 20px;
+      padding-top: 19px;
+      border-top: 1px solid $very-light-blue;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.b-ads {
+  max-height: 430px;
+}
+
+.b-ads__item {
+  border-top: 1px solid $very-light-blue;
+  padding-top: 19px;
+  time {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    color: $cornflower-blue;
+  }
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.b-ads__item--mark {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: 30px;
+    @include svg-ads-bookmark;
+  }
+}

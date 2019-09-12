@@ -1,6 +1,27 @@
 body {
   font-family: $Ubuntu;
-  background-color: $cornflower-blue;
+  background-color: $very-light-blue;
+  color: $black;
+
+  &.error-not-found {
+    background-color: $cornflower-blue;
+
+    .b-footer {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .b-footer__copy {
+      color: $white;
+      opacity: 0.4;
+      font-size: 12px;
+    }
+
+    .b-footer__wrap {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
 }
 
 .container {

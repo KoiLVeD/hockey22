@@ -1,0 +1,85 @@
+.home-page {
+
+}
+
+.home-page__header {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+
+.home-page__fullpage {
+  width: 100%;
+  height: 100%;
+  background-color: $cornflower-blue;
+}
+
+.home-page__ice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url("../images/fullpage/ice.png");
+
+}
+
+.home-page__player {
+  position: absolute;
+  width: 1057px;
+  height: 682px;
+  background-image: url("../images/fullpage/player.png");
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.home-page__puck {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 115px;
+  height: 113px;
+  background-image: url("../images/fullpage/puck.png");
+}
+
+.home-page__fullpage-bottom {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 50px;
+}
+
+.home-page__block {
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: $white;
+    margin-bottom: 38px;
+  }
+}
+
+.home-page__games {
+  display: flex;
+
+  .games {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.home-page__content {
+  margin-top: 40px;
+  main {
+
+  }
+  aside {
+
+  }
+}

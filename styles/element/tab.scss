@@ -1,9 +1,22 @@
 .tab {
   display: flex;
+  align-items: center;
+}
+
+.tab__wrap {
+  display: flex;
   justify-content: center;
 }
 
+.tab__title {
+  font-size: 14px;
+  font-weight: 300;
+  color: $black;
+  margin-right: 15px;
+}
+
 .tab__item {
+  padding: 0 19px;
   height: 40px;
   border: solid 2px $cornflower-blue;
   font-size: 14px;
@@ -32,5 +45,27 @@
 
   &.active {
     display: block;
+  }
+}
+
+.tab--radio {
+  input {
+    position: absolute;
+    z-index: -99;
+    visibility: hidden;
+
+    &:checked {
+      & + label {
+        @extend .tab__item--active
+      }
+    }
+  }
+
+  .tab__item {
+    margin: 0 -1px;
+
+    &:nth-child(2) {
+      border-radius: 23px 0 0 23px;
+    }
   }
 }

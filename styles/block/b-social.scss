@@ -1,0 +1,49 @@
+.b-social {
+  display: flex;
+}
+
+.b-social__link {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 17px;
+  border: solid 2px $black;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.b-social__link--vk {
+  &:after {
+    @include svg-i-vk;
+  }
+}
+
+.b-social__link--fb {
+  &:after {
+    @include svg-i-fb;
+  }
+}
+
+.b-social__link--yt {
+  &:after {
+    @include svg-i-yt;
+  }
+}
+
+.b-social__link--insta {
+  &:after {
+    @include svg-i-insta;
+  }
+}

@@ -1,0 +1,37 @@
+.b-main-box {
+  position: relative;
+  border-radius: 15px;
+  background-color: $white;
+  padding: 20px;
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $black;
+    margin-bottom: 20px;
+  }
+}
+
+.b-main-box__control {
+  display: flex;
+  justify-content: space-between;
+}
+
+.b-main-box__btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.b-main-box__desc {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+}

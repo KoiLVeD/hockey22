@@ -1,14 +1,17 @@
 select {
   display: block;
   width: 100%;
-  height: 50px;
-  border-radius: 8px;
-  border: solid 1px #dcdcdc;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 2px $cornflower-blue;
   background-color: $white;
-  padding-left: 15px;
+  padding-left: 18px;
   -moz-appearance: none;
   -webkit-appearance: none;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 38px;
+  color: $cornflower-blue;
 
   &::-ms-expand {
     display: none;
@@ -20,8 +23,9 @@ select {
 
   .choices__inner {
     background-color: transparent;
-    border-radius: 8px;
-    border: solid 1px #dcdcdc;
+    border-radius: 20px;
+    border: solid 2px $cornflower-blue;
+    min-height: 40px;
   }
 
   .choices__placeholder {
@@ -37,20 +41,20 @@ select {
     }
 
     .choices__inner {
-      padding: 9px;
+      padding: 3px 18px;
     }
   }
 
   &.is-open {
 
     .choices__inner {
-      border-radius: 8px 8px 0 0;
+      border-radius: 20px 20px 0 0;
     }
   }
 
   .choices__list--dropdown {
     border-color: #dcdcdc;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 20px 20px;
   }
 
 }

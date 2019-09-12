@@ -1,0 +1,37 @@
+.error-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    display: block;
+    max-width: 482px;
+    margin: 0 auto;
+  }
+}
+
+.error-page__text {
+  max-width: 420px;
+  margin: 60px auto 0;
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  span {
+    display: block;
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.43;
+    text-align: center;
+    color: $white;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

@@ -3,12 +3,252 @@ extends _layout
 block title
     title Главная страница
 block content
-    select.js-choice
-        option 1
-        option 1
-        option 1
-        option 1
-        option 1
+    .home-page
+        .home-page__header
+            .home-page__fullpage
+                .home-page__bg
+                .home-page__ice
+                .home-page__player
+                .home-page__puck
+            .home-page__fullpage-bottom
+                .container
+                    .home-page__block
+                        h2 Ближайшие матчи
+                        .home-page__games
+                            a(href='').games
+                                .games__text 2 сен, пн
+                                .games__teams
+                                    .games__teams-item
+                                        .games__img-box
+                                            img(src='./images/teams/team_1-sm.png' alt='')
+                                        span Балтика
+                                    span  -
+                                        = ' '
+                                    .games__teams-item
+                                        .games__img-box
+                                            img(src='./images/teams/team_2-sm.png' alt='')
+                                        span Красные Крылья
+                                .games__text 21:20 (Группа А)
+
+                            a(href='').games.games--default
+                                span Больше
+                                    br
+                                    | матчей
+
+                    .home-page__block-slider.js-slider-games
+                        a(href='').games
+                            .games__text 2 сен, пн
+                            .games__teams
+                                .games__teams-item
+                                    .games__img-box
+                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                    span Балтика
+                                span  -
+                                    = ' '
+                                .games__teams-item
+                                    .games__img-box
+                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                    span Красные Крылья
+                            .games__text 21:20 (Группа А)
+
+        .home-page__content
+            .container
+                .row
+                    main.col-lg-8
+                        .b-main-box
+                            h2 Матчи
+                            .b-main-box__control.js-tab
+                                .tab.js-tab-item
+                                    .tab__item.tab__item--active Ближайшие
+                                    .tab__item Прошедшие
+                                .tab.tab--radio
+                                    .tab__title Группа:
+                                    .tab__wrap
+                                        input(id='p-1' type='radio' name='group_1' checked)
+                                        label(for='p-1').tab__item Все
+                                        input(id='p-2' type='radio' name='group_1')
+                                        label(for='p-2').tab__item A
+                                        input(id='p-3' type='radio' name='group_1')
+                                        label(for='p-3').tab__item B
+                                        input(id='p-4' type='radio' name='group_1')
+                                        label(for='p-4').tab__item C
+                                        input(id='p-5' type='radio' name='group_1')
+                                        label(for='p-5').tab__item D
+
+
+                            .b-main-box__list
+                                .b-table
+                                    .b-table__title-time 2 сен, пн
+                                    .b-table__item
+                                        div 21:10
+                                        div
+                                            p
+                                                span
+                                                    img(src='./images/teams/team_1-lg.png' alt='')
+                                                | Балтика -
+                                            p
+                                                span
+                                                    img(src='./images/teams/team_2-lg.png' alt='')
+                                                | Красные Крылья
+                                        div 1п (0:0)
+                                        div 2п (0:0)
+                                        div 3п (0:0)
+                                        div Счет 0 : 0
+                                        div Группа А
+                                    .b-table__item
+                                        div 21:10
+                                        div
+                                            p
+                                                span
+                                                    img(src='./images/teams/team_1-lg.png' alt='')
+                                                | Балтика -
+                                            p
+                                                span
+                                                    img(src='./images/teams/team_2-lg.png' alt='')
+                                                | Красные
+                                        div 1п (0:0)
+                                        div 2п (0:0)
+                                        div 3п (0:0)
+                                        div Счет 0 : 0
+                                        div Группа А
+
+                        .b-main-box
+                            h2 Новости
+                            .b-main-box__list
+                                .news-item
+                                    .news-item__img
+                                        img(src='./images/news_1@2x.jpg' alt='')
+                                    .news-item__text
+                                        h3 Состоялась первая тренировка ХК «СкиФ»
+                                        p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
+                                        .news-item__control
+                                            span 24 ноября 2019
+                                            span Просмотров: 287
+                                            a(href='') Читать подробнее
+
+                                .news-item
+                                    .news-item__img
+                                        img(src='./images/news_1@2x.jpg' alt='')
+                                    .news-item__text
+                                        h3 Состоялась первая тренировка ХК «СкиФ»
+                                        p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
+                                        .news-item__control
+                                            span 24 ноября 2019
+                                            span Просмотров: 287
+                                            a(href='') Читать подробнее
+
+                            .b-main-box__btn
+                                a(href='').btn.btn--yellow Все новости
+
+
+
+
+                    aside.col-lg-4
+                        .b-main-box
+                            h2 Лучшие снайперы
+                            .b-list-player
+                                .b-list-player__control
+                                    select.selectbox.js-choice
+                                        option 2018 - 2019
+                                        option 2017 - 2019
+                                        option 2018 - 2019
+
+                                    .tab.tab--radio
+                                        .tab__wrap
+                                            input(id='sp1-2' type='radio' name='group_3' checked)
+                                            label(for='sp1-2').tab__item A
+                                            input(id='sp1-3' type='radio' name='group_3')
+                                            label(for='sp1-3').tab__item B
+                                            input(id='sp1-4' type='radio' name='group_3')
+                                            label(for='sp1-4').tab__item C
+                                            input(id='sp1-5' type='radio' name='group_3')
+                                            label(for='sp1-5').tab__item D
+                                .b-list-player__list
+                                    a(href='').player
+                                        .player__avatar
+                                            img(src='http://www.kuban.nhliga.org/data/images/players/small/40549_Pogrebnyak_20181026104538.jpg' alt='')
+                                        .player__name
+                                            p Канайкин Роман
+                                            span Скиф
+                                        .player__count 24 гола
+                                    a(href='').player
+                                        .player__avatar
+                                            img(src='http://www.kuban.nhliga.org/data/images/players/small/40549_Pogrebnyak_20181026104538.jpg' alt='')
+                                        .player__name
+                                            p Канайкин Роман
+                                            span Скиф
+                                        .player__count 24 гола
+                            .b-main-box__btn
+                                a(href='').btn.btn--yellow Вся статистика
+
+                        .b-main-box
+                            h2 Лучшие бомбардиры
+                            .b-list-player__control
+                                select
+                                    option 2018 - 2019
+                                .tab.tab--radio
+                                    .tab__wrap
+                                        input(id='sp-2' type='radio' name='group_2' checked)
+                                        label(for='sp-2').tab__item A
+                                        input(id='sp-3' type='radio' name='group_2')
+                                        label(for='sp-3').tab__item B
+                                        input(id='sp-4' type='radio' name='group_2')
+                                        label(for='sp-4').tab__item C
+                                        input(id='sp-5' type='radio' name='group_2')
+                                        label(for='sp-5').tab__item D
+                            .b-list-player__list
+                                a(href='').player
+                                    .player__avatar
+                                        img(src='http://www.kuban.nhliga.org/data/images/players/small/40549_Pogrebnyak_20181026104538.jpg' alt='')
+                                    .player__name
+                                        p Канайкин Роман
+                                        span Скиф
+                                    .player__count 24 гола
+                            .b-main-box__btn
+                                a(href='').btn.btn--yellow Вся статистика
+
+                        .b-main-box
+                            h2 Фотоотчеты
+                            .b-aside-gallery
+                                a(href='').b-aside-gallery__item
+                                    img(src='' alt='')
+                                    .b-aside-gallery__text
+                                        .b-aside-gallery__year с.  2014 - 2015
+                                        .b-aside-gallery__title
+                                            p Красные крылья - Полимер
+                                            span (Группа В)
+                            .b-main-box__btn
+                                a(href='').btn.btn--yellow Все альбомы
+
+                        .b-main-box
+                            h2 Объявления
+                            .b-main-box__desc 86 объявлений
+                            .b-ads.js-scrollbar
+                                .b-ads__item.b-ads__item--mark
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item.b-ads__item--mark
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+
 
 
 

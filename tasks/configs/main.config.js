@@ -2,6 +2,7 @@ const autoprefixer = require('autoprefixer');
 const inlineSvg = require('postcss-inline-svg');
 const flexbugs = require('postcss-flexbugs-fixes');
 const assets = require('postcss-assets');
+const postcssCustomMedia = require('postcss-custom-media');
 
 let config = {
   API: '',
@@ -18,7 +19,8 @@ let config = {
       loadPaths: ['svg-icons/', 'images/']
     }),
     inlineSvg(),
-    flexbugs()
+    flexbugs(),
+    postcssCustomMedia()
   ],
   paths: {
     // JS

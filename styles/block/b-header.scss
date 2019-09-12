@@ -228,3 +228,22 @@
     display: block;
   }
 }
+
+
+.b-header--black {
+  position: static;
+  .b-header__logo-symol {
+    @include svg-logo-black;
+  }
+  .b-header__logo-text {
+    @include svg-logo-text-black;
+  }
+
+  .b-header__menu ul a {
+    color: $black;
+
+    &:after {
+      background-color: $black;
+    }
+  }
+}
