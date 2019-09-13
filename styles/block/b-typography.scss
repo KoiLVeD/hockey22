@@ -1,0 +1,127 @@
+.b-typography {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+
+  time {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.17;
+    color: #959595;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    margin-bottom: 20px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  blockquote {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 20px 20px 34px;
+    border-radius: 8px;
+    border: solid 1px #cfd4e0;
+    margin-bottom: 30px;
+
+    p {
+      flex-grow: 1;
+      font-size: 16px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: $black;
+      margin-bottom: 10px;
+      padding-left: 30px;
+    }
+
+    img {
+      width: 95px;
+      height: 95px;
+      object-fit: cover;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.17;
+      color: #959595;
+      right: 20px;
+      bottom: 19px;
+    }
+
+    & + p {
+      margin-bottom: 30px;
+    }
+
+    &.icon {
+      p {
+        padding-left: 67px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        @include svg-text-quotes;
+        top: 20px;
+        left: 20px;
+      }
+    }
+  }
+
+  hr {
+    border-top: none;
+    border-color: #eaeaea;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.b-typography__image {
+  margin-bottom: 30px;
+}
+
+.b-typography__video {
+  margin-bottom: 30px;
+  p {
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.17;
+    color: #959595;
+    margin: 0;
+  }
+}
+
+.b-typography__footer {
+  p {
+    font-size: 12px;
+    line-height: 1.67;
+    color: $brown-grey;
+    margin-bottom: 0;
+  }
+}

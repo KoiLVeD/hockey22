@@ -10,5 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let scrollbar = document.querySelector('.js-scrollbar');
 
-  const simpleBar = new SimpleBar(scrollbar);
+  if (scrollbar) {
+    const simpleBar = new SimpleBar(scrollbar);
+  }
 });

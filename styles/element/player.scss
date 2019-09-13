@@ -43,3 +43,20 @@
   font-size: 14px;
   font-weight: 300;
 }
+
+.player__phone {
+  span {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1;
+    color: #9d9d9d;
+    margin-bottom: 9px;
+  }
+  a {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+  }
+}

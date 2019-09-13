@@ -1,0 +1,98 @@
+.b-season {
+
+}
+
+.b-season__card {
+  position: relative;
+  width: calc(100%/4);
+  padding: 19px;
+  border-radius: 10px;
+  border: solid 1px $very-light-blue;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../images/ice_in_card@2x.png");
+  overflow: hidden;
+
+  &:hover {
+    .b-season__logo {
+      svg path {
+        fill: $cornflower-blue;
+      }
+    }
+
+    .b-season__circle {
+      transform: translate(-135%, -50%);
+    }
+  }
+}
+
+.b-season__wrap {
+  position: relative;
+  z-index: 10;
+}
+
+.b-season__labels {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.b-season__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+  border-radius: 23px;
+  padding: 0 15px;
+  height: 30px;
+  line-height: 30px;
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.b-season__label--yellow {
+  background-color: $butterscotch;
+}
+
+.b-season__label--blue {
+  background-color: $cornflower-blue;
+}
+
+.b-season__logo {
+  text-align: center;
+  margin-bottom: 40px;
+  svg path {
+    transition: .3s ease-in-out all;
+  }
+}
+
+.b-season__text {
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    color: #6e6e6e;
+    margin-bottom: 9px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+
+.b-season__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //right: 0;
+  //bottom: 0;
+  //margin: auto;
+  width: 450px;
+  height: 450px;
+  background-color: $white;
+  border-radius: 50%;
+  transition: .3s ease-in-out all;
+}

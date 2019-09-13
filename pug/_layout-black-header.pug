@@ -12,16 +12,16 @@ html(lang='ru')
 
         block title
             title Заголовок по умолчанию
-    body.error-not-found
-        include blocks/_b-header
+    body
+        include blocks/_b-header-black
         block content
-        include blocks/_b-footer-404
+        include blocks/_b-footer
 
         // 1h-30
-        // 15m 20-30
-
+        // 12. 3h
+        // 13. 19-00
     // script(src='https://www.youtube.com/iframe_api')
     // script(async defer src="https://maps.googleapis.com/maps/api/js?key=")
-    // script(async defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+    script(async defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
     script(src="./js/bundle.js")
 

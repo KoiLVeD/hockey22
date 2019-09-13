@@ -35,3 +35,16 @@ input {
   -moz-appearance: none;
   appearance: none;
 }
+
+.news-page {
+  padding-top: 120px;
+}
+
+.news-page__content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.map-icon {
+  @include svg-map-marker;
+}
