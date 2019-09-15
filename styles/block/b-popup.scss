@@ -1,0 +1,19 @@
+.b-popup {
+
+}
+
+.b-popup__close {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  &:after {
+    content: '';
+    display: block;
+    @include svg-close-popup;
+  }
+}

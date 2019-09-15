@@ -53,8 +53,28 @@ select {
   }
 
   .choices__list--dropdown {
-    border-color: #dcdcdc;
+    border-color: $cornflower-blue;
     border-radius: 0 0 20px 20px;
+    border-width: 2px;
+    margin-top: -2px;
   }
 
+  .choices__item--selectable {
+    line-height: 22px;
+    white-space: nowrap;
+  }
+
+  .choices__list--dropdown {
+    .choices__item--selectable.is-highlighted {
+      background-color: rgba(64,105,207, .1);
+    }
+  }
+
+  .choices__list--single {
+    padding-left: 0;
+    .choices__item {
+      color: $cornflower-blue;
+      font-weight: 500;
+    }
+  }
 }

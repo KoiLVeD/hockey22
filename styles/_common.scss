@@ -48,3 +48,15 @@ input {
 .map-icon {
   @include svg-map-marker;
 }
+
+.custom-popup {
+  .tingle-modal-box__content {
+    padding: 0;
+  }
+}
+
+.custom-popup--sm {
+  .tingle-modal-box {
+    max-width: 680px;
+  }
+}

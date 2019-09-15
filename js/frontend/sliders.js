@@ -3,11 +3,24 @@ import Swiper from 'swiper';
 document.addEventListener('DOMContentLoaded', function () {
   //let gameSlider = document.querySelector('.js-slider-games');
 
-  var mySwiper = new Swiper ('.js-game-slider', {
+  let gameSwiper = new Swiper ('.js-game-slider', {
     effect: 'fade',
     navigation: {
       nextEl: '.js-game-slider-prev',
       prevEl: '.js-game-slider-next',
+    }
+  })
+
+  var arenasSwiper = new Swiper ('.js-arenas-slider', {
+    slidesPerView: 3,
+    spaceBetween: 35,
+    navigation: {
+      nextEl: '.js-arenas-slider-next',
+      prevEl: '.js-arenas-slider-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
   })
 });

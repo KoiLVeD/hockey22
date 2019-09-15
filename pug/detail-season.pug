@@ -23,7 +23,7 @@ block content
                                     p Финальный матч кубка города состоится 11.04.2019 в 19:00 на льду "Карандин-Арены", по окночанию финального матча пройдет торжественное награждение участников Чемпионата города во всех группах
                                 .b-season-detail__btn
                                     .btn.btn--yellow Показать турнирную сетку
-                                    .btn.btn--blue Календарь матчей
+                                    .btn.btn--blue.js-calendar-popup Календарь матчей
                                 .b-season-detail__section
                                     h2 Состав дивизионов
                                     ol
@@ -109,9 +109,331 @@ block content
                                             div 5 : 0
                                             div Завершен
 
+    .b-calendar
+        .b-calendar__title Календарь матчей
+        .b-calendar__control
+            .b-calendar__selectbox
+                select.selectbox.js-choice
+                    option Выбрать турнир
+                    option 2017 - 2019
+                    option 2018 - 2019
+            .b-calendar__current-title-date Январь, 2020
+            .b-calendar__tabs
+                .tab.js-tab-item
+                    .tab__item.tab__item--active Месяц
+                    .tab__item Неделя
+            .b-calendar__arrows
+                .b-calendar__arrows-item.b-calendar__arrows-item--prev
+                .b-calendar__arrows-item.b-calendar__arrows-item--next
+        .b-calendar__container
+            .b-calendar__month
+                .b-calendar__days-names
+                    .b-calendar__day-name понедельник
+                    .b-calendar__day-name вторник
+                    .b-calendar__day-name среда
+                    .b-calendar__day-name четверг
+                    .b-calendar__day-name пятница
+                    .b-calendar__day-name суббота
+                    .b-calendar__day-name восскресенье
+                .b-calendar__table
+                    .b-calendar__strips
+                        .b-calendar__strip
+                        .b-calendar__strip
+                        .b-calendar__strip
+                        .b-calendar__strip
+
+                    .b-calendar__cells
+                        .b-calendar__cell
+                            .b-calendar__cell-number 01
+                            .b-calendar__cell-inner
+                                .games.games--payload
+                                    .games__text 2 сен, пн
+                                    .games__teams
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_1-sm.png' alt='')
+                                            span Балтика
+                                        span  -
+                                            = ' '
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_2-sm.png' alt='')
+                                            span Красные Крылья
+                                    .games__text 21:20 (Группа А)
+                                    .games__payload
+                                        .games__account 2:1
+                                        .games__ico.games__ico--video
+                                        .games__ico.games__ico--docs
+                        .b-calendar__cell
+                            .b-calendar__cell-number 02
+                            .b-calendar__cell-inner
+                                .games.games--payload
+                                    .games__text 2 сен, пн
+                                    .games__teams
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_1-sm.png' alt='')
+                                            span Балтика
+                                        span  -
+                                            = ' '
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_2-sm.png' alt='')
+                                            span Красные Крылья
+                                    .games__text 21:20 (Группа А)
+                                    .games__payload
+                                        .games__account 2:1
+                                .b-calendar__cell-show.b-calendar__cell-show--dis Показать еще
+                        .b-calendar__cell
+                            .b-calendar__cell-number 03
+                            .b-calendar__cell-inner
+                                .games
+                                    .games__text 2 сен, пн
+                                    .games__teams
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_1-sm.png' alt='')
+                                            span Балтика
+                                        span  -
+                                            = ' '
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_2-sm.png' alt='')
+                                            span Красные Крылья
+                                    .games__text 21:20 (Группа А)
+                                .b-calendar__cell-show Показать еще
+
+                        .b-calendar__cell
+                            .b-calendar__cell-number 04
+                            .b-calendar__cell-inner
+                                .games.games--payload
+                                    .games__text 2 сен, пн
+                                    .games__teams
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_1-sm.png' alt='')
+                                            span Балтика
+                                        span  -
+                                            = ' '
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_2-sm.png' alt='')
+                                            span Красные Крылья
+                                    .games__text 21:20 (Группа А)
+                                    .games__payload
+                                        .games__account 2:1
+                        .b-calendar__cell.b-calendar__cell--current
+                            .b-calendar__cell-number 05
+                            .b-calendar__cell-inner
+                                .games
+                                    .games__text 2 сен, пн
+                                    .games__teams
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_1-sm.png' alt='')
+                                            span Балтика
+                                        span  -
+                                            = ' '
+                                        .games__teams-item
+                                            .games__img-box
+                                                img(src='./images/teams/team_2-sm.png' alt='')
+                                            span Красные Крылья
+                                    .games__text 21:20 (Группа А)
+                                .b-calendar__cell-show Показать еще
+                        .b-calendar__cell
+                            .b-calendar__cell-number 06
+                        .b-calendar__cell
+                            .b-calendar__cell-number 07
+                        .b-calendar__cell
+                            .b-calendar__cell-number 08
+                        .b-calendar__cell
+                            .b-calendar__cell-number 09
+                        .b-calendar__cell
+                            .b-calendar__cell-number 10
+                        .b-calendar__cell
+                            .b-calendar__cell-number 11
+                        .b-calendar__cell
+                            .b-calendar__cell-number 12
+                        .b-calendar__cell
+                            .b-calendar__cell-number 13
+                        .b-calendar__cell
+                            .b-calendar__cell-number 14
+                        .b-calendar__cell
+                            .b-calendar__cell-number 15
+                        .b-calendar__cell
+                            .b-calendar__cell-number 16
+                        .b-calendar__cell
+                            .b-calendar__cell-number 17
+                        .b-calendar__cell
+                            .b-calendar__cell-number 18
+                        .b-calendar__cell
+                            .b-calendar__cell-number 19
+                        .b-calendar__cell
+                            .b-calendar__cell-number 20
+                        .b-calendar__cell
+                            .b-calendar__cell-number 21
+                        .b-calendar__cell
+                            .b-calendar__cell-number 22
+                        .b-calendar__cell
+                            .b-calendar__cell-number 23
+                        .b-calendar__cell
+                            .b-calendar__cell-number 24
+                        .b-calendar__cell
+                            .b-calendar__cell-number 25
+                        .b-calendar__cell
+                            .b-calendar__cell-number 26
+                        .b-calendar__cell
+                            .b-calendar__cell-number 27
+                        .b-calendar__cell
+                            .b-calendar__cell-number 28
+                        .b-calendar__cell
+                            .b-calendar__cell-number 29
+                        .b-calendar__cell
+                            .b-calendar__cell-number 30
+                        .b-calendar__cell
+                            .b-calendar__cell-number 31
+                        .b-calendar__cell
+                            .b-calendar__cell-number -
+                        .b-calendar__cell
+                            .b-calendar__cell-number -
+                        .b-calendar__cell
+                            .b-calendar__cell-number -
+                        .b-calendar__cell
+                            .b-calendar__cell-number -
+
+    .b-popup
+        .b-popup__close.js-close-popup
+        .b-statistic-game
+            .b-statistic-game__title
+                p Балтика - Красные Крылья
+                span Матч от 24 января 2019
+            .b-statistic-game__account
+                .b-statistic-game__account-team
+                    img(src='./images/teams/team_1-lg.png' alt='')
+                .b-statistic-game__account-number
+                    p 5:4
+                    span счет
+                .b-statistic-game__account-team
+                    img(src='./images/teams/team_2-lg.png' alt='')
+            .b-statistic-game__periods
+                .b-statistic-game__period
+                    .b-statistic-game__period-title 1-й период
+                    .b-statistic-game__period-events
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Передача)
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--goal
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Гол)
+                    .b-statistic-game__period-events.b-statistic-game__period-events--reverse
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Передача)
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--goal
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Гол)
+                .b-statistic-game__period
+                    .b-statistic-game__period-title 2-й период
+                    .b-statistic-game__period-events
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Передача)
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--goal
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Гол)
+                    .b-statistic-game__period-events.b-statistic-game__period-events--reverse
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Передача)
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--goal
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Гол)
+                    .b-statistic-game__period-events
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Передача)
+                .b-statistic-game__period
+                    .b-statistic-game__period-title 3-й период
+                    .b-statistic-game__period-events
+                        .b-statistic-game__period-event
+                            .b-statistic-game__period-time 21:10
+                            .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                            .b-statistic-game__period-name Мюттюнен М.
+                            .b-statistic-game__period-type (Передача)
 
 
-
+    .b-popup
+        .b-popup__close.js-close-popup
+        .b-teams
+            .b-teams__title Бочкари
+            .b-teams__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+            .b-teams__tabs
+                .tab.js-tab-item
+                    .tab__item.tab__item--active Состав
+                    .tab__item Матчи
+            .b-teams__list
+                .b-teams__players
+                    .b-teams__player-type Вратари
+                    .b-teams__player-table
+                        .b-teams__player-header
+                            div №
+                            div Имя
+                            div Дата рождения
+                            div
+                        .b-teams__player-body
+                            .b-teams__player-item
+                                div 99
+                                div
+                                    img(src='./images/coach@2x.jpg' alt='')
+                                    | Симоненко Максим
+                                div 12.12.1987
+                                div
+                                    .b-teams__player-more Подробнее
+                            .b-teams__player-item
+                                div 99
+                                div
+                                    img(src='./images/coach@2x.jpg' alt='')
+                                    | Симоненко Максим
+                                div 12.12.1987
+                                div
+                                    .b-teams__player-more Подробнее
+                                    .b-teams__player-box
+                                        .b-teams__player-avatar
+                                            img(src='' alt='')
+                                            span A
+                                        .b-teams__player-name Симоненко Максим
+                                        .b-teams__player-info г. Барнаул, 27 лет
+                                        .b-teams__player-text
+                                            b Статистика
+                                            span Сезон 2019-2020
+                                        .b-teams__player-data
+                                            div
+                                                b Г
+                                                | 15
+                                            div
+                                                b П
+                                                | 7
+                                            div
+                                                b О
+                                                | 25
 
 
 

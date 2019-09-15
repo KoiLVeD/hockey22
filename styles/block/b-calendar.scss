@@ -1,0 +1,264 @@
+.b-calendar {
+  padding: 20px 20px 0;
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.b-calendar__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 19px;
+}
+
+.b-calendar__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 19px;
+}
+
+.b-calendar__selectbox {
+  width: 270px;
+  margin-right: auto;
+}
+
+.b-calendar__current-title-date {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.b-calendar__tabs {
+  margin-left: auto;
+
+  .tab__item {
+    width: 135px;
+  }
+}
+
+.b-calendar__arrows {
+  display: flex;
+  margin-left: 40px;
+}
+
+.b-calendar__arrows-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 2px $cornflower-blue;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:after {
+    content: '';
+    display: block;
+    @include svg-arrow-left-blue-slider;
+  }
+}
+
+.b-calendar__arrows-item--prev {
+
+}
+
+.b-calendar__arrows-item--next {
+  margin-left: 10px;
+
+  &:after {
+    transform: rotate(180deg);
+  }
+}
+
+.b-calendar__container {
+
+}
+
+.b-calendar__month {
+
+}
+
+.b-calendar__table {
+  position: relative;
+}
+
+.b-calendar__days-names {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8px 0 3px;
+}
+
+.b-calendar__day-name {
+  text-align: center;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.b-calendar__cells {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.b-calendar__cell {
+  width: 14.28571%;
+  position: relative;
+  height: 150px;
+  padding: 10px 10px 0;
+  border-top: 1px solid $very-light-blue;
+  text-align: center;
+}
+
+.b-calendar__cell-number {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.b-calendar__strips {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.b-calendar__strip {
+  width: 14.28571%;
+  height: 100%;
+  background-color: #edf3ff;
+}
+
+.b-calendar__cell--current {
+  background-color: $cornflower-blue;
+
+  .b-calendar__cell-number {
+    color: $white;
+  }
+
+  .b-calendar__cell-show {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.b-calendar__cell-inner {
+  .games {
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+  }
+
+  .games--payload {
+    padding-bottom: 19px;
+
+    & + .b-calendar__cell-show {
+      margin-top: 12px;
+    }
+  }
+
+  .games__text {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0;
+  }
+
+  .games__teams {
+    margin-top: 0;
+
+    & + .games__text {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  .games__img-box {
+    width: 24px;
+    height: 24px;
+  }
+
+  .games__teams-item  {
+    span {
+      font-size: 10px;
+    }
+  }
+
+  .games__payload {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: -10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .games__account {
+    min-width: 44px;
+    padding: 0 10px;
+    height: 20px;
+    border-radius: 23px;
+    background-color: $cornflower-blue;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $white;
+    text-align: center;
+  }
+
+  .games__ico {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: $cornflower-blue;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .games__ico--video {
+    &:after {
+      content: '';
+      display: block;
+      @include svg-i-play;
+    }
+  }
+
+  .games__ico--docs {
+    &:after {
+      content: '';
+      display: block;
+      @include svg-i-docs;
+    }
+  }
+}
+
+
+
+.b-calendar__cell-show {
+  margin-top: 6px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: $cornflower-blue;
+  border-bottom: 1px dashed $cornflower-blue;
+  cursor: pointer;
+}
+.b-calendar__cell-show--dis {
+  opacity: 0.4;
+  pointer-events: none;
+}
+

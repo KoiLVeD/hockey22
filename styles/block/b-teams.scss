@@ -1,0 +1,128 @@
+.b-teams {
+  background-color: $white;
+  padding: 20px;
+}
+
+.b-teams__title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.b-teams__desc {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  margin-bottom: 20px;
+}
+
+.b-teams__tabs {
+  margin-bottom: 30px;
+}
+
+.b-teams__list {
+
+}
+
+.b-teams__players {
+
+}
+
+.b-teams__player-type {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: $cornflower-blue;
+  margin-bottom: 20px;
+}
+
+.b-teams__player-table {
+
+}
+
+.b-teams__player-header {
+  display: flex;
+  align-items: center;
+  div {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    &:first-child {
+      text-align: center;
+      width: 56px;
+    }
+    &:nth-child(2) {
+      width: 47%;
+      padding-left: 15px;
+    }
+    &:nth-child(3) {
+      width: 124px;
+      text-align: center;
+    }
+  }
+}
+
+.b-teams__player-body {
+  margin-top: 10px;
+}
+
+.b-teams__player-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $very-light-blue;
+  & > div {
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 300;
+
+    &:first-child {
+      text-align: center;
+      width: 56px;
+    }
+    &:nth-child(2) {
+      width: 47%;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+
+      img {
+        width: 42px;
+        height: 42px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+    &:nth-child(3) {
+      width: 124px;
+      text-align: center;
+    }
+
+    &:last-child {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 108px;
+      height: 30px;
+      padding: 0;
+    }
+  }
+}
+
+.b-teams__player-more {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+  padding: 0 15px;
+  line-height: 30px;
+  height: 30px;
+  border-radius: 23px;
+  background-color: $cornflower-blue;
+}

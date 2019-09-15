@@ -1,19 +1,64 @@
 .b-gallery-aside {
   display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
 }
 
 .b-gallery-aside__item {
   position: relative;
+  width: calc(50% - 20px);
+  margin: 10px;
+  border-radius: 15px;
+
+  &:hover {
+    .b-gallery-aside__text {
+      opacity: 1;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .b-gallery-aside__text {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 19px;
+  opacity: 0;
+  transition: .3s ease-in-out all;
 }
 
 .b-gallery-aside__year {
-
+  font-size: 12px;
+  font-weight: 300;
+  color: $white;
+  margin-bottom: auto;
 }
 
 .b-gallery-aside__title {
+    margin-top: auto;
 
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    color: $white;
+    margin-bottom: 10px;
+  }
+  span {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1;
+    color: $white;
+  }
 }

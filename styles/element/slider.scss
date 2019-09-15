@@ -28,3 +28,22 @@
     transform: rotate(180deg);
   }
 }
+
+.custom-pagination-slider {
+
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid $cornflower-blue;
+    background-color: $white;
+    opacity: 1;
+    margin: 0 5px;
+    outline: none;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $cornflower-blue;
+  }
+}

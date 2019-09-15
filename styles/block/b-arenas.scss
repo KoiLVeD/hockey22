@@ -1,9 +1,39 @@
 .b-arenas {
   display: flex;
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 54px;
+
+  .swiper-container {
+    width: 100%;
+    margin: 0 70px;
+  }
+
+  .custom-button-slider {
+    border-color: $cornflower-blue;
+
+    &:after {
+      @include svg-arrow-left-blue-slider;
+    }
+  }
+
+  .custom-button-slider--prev {
+    left: 0;
+  }
+
+  .custom-button-slider--next {
+    right: 0;
+  }
+
+  .custom-pagination-slider {
+    bottom: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .b-arenas__item {
-  width: calc(100%/3);
   height: 500px;
   border-radius: 10px;
   border: solid 1px $very-light-blue;
