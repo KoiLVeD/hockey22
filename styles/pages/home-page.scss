@@ -53,6 +53,11 @@
   width: 100%;
   left: 0;
   bottom: 50px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .home-page__block {
@@ -64,7 +69,12 @@
   }
 }
 
+.home-page__block--slider {
+  width: 260px;
+}
+
 .home-page__games {
+  position: relative;
   display: flex;
 
   .games {
@@ -72,6 +82,22 @@
       margin-left: 20px;
     }
   }
+
+  .custom-button-slider--prev {
+    right: 0;
+    left: auto;
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .custom-button-slider--next {
+    right: 0;
+    left: auto;
+    bottom: 0;
+    top: auto;
+    transform: rotate(90deg);
+  }
+
 }
 
 .home-page__content {

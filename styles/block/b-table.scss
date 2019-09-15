@@ -6,8 +6,8 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.71;
-  color: #070707;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .b-table__item {
@@ -15,7 +15,12 @@
   display: flex;
   align-items: center;
   width: 100%;
-  div {
+  transition: .3s ease-in-out all;
+
+  &:hover {
+    background-color: $pale-grey;
+  }
+  & > div {
     padding: 4px 0;
     flex-grow: 1;
     font-size: 14px;
@@ -51,4 +56,17 @@
       }
     }
   }
+}
+
+.b-table__item-icon {
+  width: 20px;
+  height: 20px;
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.b-table__item-icon--video {
+
 }

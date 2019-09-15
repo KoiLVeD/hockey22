@@ -2,6 +2,10 @@
 
 }
 
+.b-season__control {
+  margin-bottom: 30px;
+}
+
 .b-season__card {
   position: relative;
   width: calc(100%/4);
@@ -95,4 +99,110 @@
   background-color: $white;
   border-radius: 50%;
   transition: .3s ease-in-out all;
+}
+
+
+// b-season-detail
+
+
+.b-season-detail {
+  display: flex;
+}
+
+.b-season-detail__aside {
+  width: 100%;
+  max-width: 420px;
+}
+
+.b-season-detail__main {
+  width: 100%;
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.b-season-detail__note {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  p {
+    margin: 0;
+  }
+}
+
+.b-season-detail__btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.b-season-detail__section {
+  position: relative;
+  margin-bottom: 40px;
+  h2 {
+    font-size: 18px;
+  }
+
+  & > span {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    display: block;
+    width: 185px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.33;
+    color: $brown-grey;
+  }
+
+  ol, ul {
+    margin-bottom: 0;
+
+    li {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  ol {
+    padding-left: 27px;
+
+    li {
+      line-height: 2;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      line-height: 1.43;
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          @include svg-docs;
+          flex-shrink: 0;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+.b-season-detail__tables {
+  .b-table {
+
+  }
 }

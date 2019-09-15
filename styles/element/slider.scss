@@ -1,0 +1,30 @@
+.custom-button-slider {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  border: solid 2px $white;
+  background-image: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  margin-top: 0;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    @include svg-arrow-left-back;
+  }
+}
+
+.custom-button-slider--prev {
+  &:after {
+
+  }
+}
+
+.custom-button-slider--next {
+  &:after {
+    transform: rotate(180deg);
+  }
+}

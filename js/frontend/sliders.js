@@ -1,27 +1,13 @@
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', function () {
-  let gameSlider = document.querySelector('.js-slider-games');
+  //let gameSlider = document.querySelector('.js-slider-games');
 
-  var mySwiper = new Swiper ('.js-slider-games', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
+  var mySwiper = new Swiper ('.js-game-slider', {
+    effect: 'fade',
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
+      nextEl: '.js-game-slider-prev',
+      prevEl: '.js-game-slider-next',
     },
   })
 });

@@ -1,3 +1,24 @@
 @import 'simplebar';
 @import 'choices';
 @import 'grid';
+@import 'swiper';
+
+.custom-scrollbar {
+  .simplebar-track {
+    top: 10px;
+    width: 6px;
+    border-radius: 3px;
+    background-color: $pale-grey;
+  }
+
+  .simplebar-scrollbar {
+    width: 100%;
+    right: 0;
+    background-color: $cornflower-blue;
+    border-radius: 3px;
+
+    &:before {
+      display: none;
+    }
+  }
+}

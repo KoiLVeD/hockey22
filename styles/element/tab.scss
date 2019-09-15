@@ -26,6 +26,7 @@
   text-align: center;
   transition: .3s ease-in-out all;
   cursor: pointer;
+  white-space: nowrap;
 
   &:first-child {
     border-radius: 23px 0 0 23px;

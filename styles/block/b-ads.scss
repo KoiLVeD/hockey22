@@ -1,10 +1,13 @@
 .b-ads {
+  border-top: 1px solid $very-light-blue;
   max-height: 430px;
 }
 
 .b-ads__item {
   border-top: 1px solid $very-light-blue;
   padding-top: 19px;
+  margin-right: 20px;
+
   time {
     display: block;
     font-size: 14px;
@@ -23,6 +26,10 @@
     font-size: 14px;
     font-weight: 300;
     color: $cornflower-blue;
+  }
+
+  &:first-child {
+    margin-top: -1px;
   }
 
   &:not(:first-child) {
