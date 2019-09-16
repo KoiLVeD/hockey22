@@ -3,10 +3,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   img {
     display: block;
     max-width: 482px;
     margin: 0 auto;
+
+    @include bp($bp-540) {
+      max-width: 240px;
+    }
   }
 }
 
@@ -14,13 +19,24 @@
   max-width: 420px;
   margin: 60px auto 0;
 
+  @include bp($bp-540) {
+    max-width: 240px;
+    margin-top: 20px;
+  }
+
   p {
     font-size: 18px;
     font-weight: 500;
     color: $white;
     margin-bottom: 20px;
     text-align: center;
+
+    @include bp($bp-540) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
   }
+
   span {
     display: block;
     opacity: 0.5;
@@ -29,6 +45,11 @@
     line-height: 1.43;
     text-align: center;
     color: $white;
+
+    @include bp($bp-540) {
+      font-size: 12px;
+      line-height: 1.67;
+    }
 
     a {
       text-decoration: underline;

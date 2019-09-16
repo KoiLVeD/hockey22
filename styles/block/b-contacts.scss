@@ -2,16 +2,33 @@
   display: flex;
   justify-content: space-between;
   padding-right: 90px;
+
+  @include bp($bp-ipad-1024) {
+    width: 100%;
+    padding-right: 0;
+    flex-direction: column;
+  }
 }
 
 .b-contacts__map {
   width: 100%;
   max-width: 630px;
+  margin-right: 20px;
+
+  @include bp($bp-ipad-1024) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .b-contacts__desc {
   width: 100%;
   max-width: 420px;
+
+  @include bp($bp-ipad-1024) {
+    max-width: 100%;
+  }
 
   h2 {
     font-size: 20px;
@@ -21,8 +38,29 @@
   }
 }
 
+.b-contacts__info {
+  @include bp($bp-ipad-1024) {
+    display: flex;
+  }
+
+  @include bp($bp-640) {
+    flex-direction: column;
+  }
+}
+
 .b-contacts__item {
   margin-bottom: 29px;
+
+  @include bp($bp-ipad-1024) {
+    width: calc(100%/3);
+    margin-bottom: 8px;
+  }
+
+  @include bp($bp-640) {
+    width: 100%;
+    margin-bottom: 29px;
+  }
+
   span {
     display: block;
     font-size: 12px;
@@ -44,6 +82,9 @@
 .b-contacts__worker {
   padding-top: 19px;
 
+  @include bp($bp-640) {
+    padding-top: 0;
+  }
   .player {
     &:not(:first-child) {
       margin-top: 19px;

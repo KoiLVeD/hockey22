@@ -236,6 +236,10 @@
   }
   .b-header__logo-text {
     @include svg-logo-text-black;
+
+    @include bp($bp-ipad-1024) {
+      display: block;
+    }
   }
 
   .b-header__menu ul a {
@@ -244,5 +248,9 @@
     &:after {
       background-color: $black;
     }
+  }
+
+  .b-header__btn-menu {
+    @include svg-mobile-menu-black;
   }
 }

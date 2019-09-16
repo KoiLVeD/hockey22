@@ -45,6 +45,10 @@
 }
 
 .player__phone {
+  @include bp($bp-ipad-1024) {
+    margin-right: 50px;
+  }
+
   span {
     display: block;
     font-size: 12px;

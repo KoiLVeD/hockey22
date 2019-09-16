@@ -382,59 +382,221 @@ block content
 
     .b-popup
         .b-popup__close.js-close-popup
-        .b-teams
+        .b-teams.js-tab
             .b-teams__title Бочкари
             .b-teams__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
             .b-teams__tabs
                 .tab.js-tab-item
                     .tab__item.tab__item--active Состав
                     .tab__item Матчи
-            .b-teams__list
-                .b-teams__players
-                    .b-teams__player-type Вратари
-                    .b-teams__player-table
-                        .b-teams__player-header
-                            div №
-                            div Имя
-                            div Дата рождения
-                            div
-                        .b-teams__player-body
-                            .b-teams__player-item
-                                div 99
+            .b-teams__container.js-tab-content
+                .b-teams__list.active
+                    .b-teams__players
+                        .b-teams__player-type Вратари
+                        .b-teams__player-table
+                            .b-teams__player-header
+                                div №
+                                div Имя
+                                div Дата рождения
                                 div
-                                    img(src='./images/coach@2x.jpg' alt='')
-                                    | Симоненко Максим
-                                div 12.12.1987
-                                div
-                                    .b-teams__player-more Подробнее
-                            .b-teams__player-item
-                                div 99
-                                div
-                                    img(src='./images/coach@2x.jpg' alt='')
-                                    | Симоненко Максим
-                                div 12.12.1987
-                                div
-                                    .b-teams__player-more Подробнее
-                                    .b-teams__player-box
-                                        .b-teams__player-avatar
-                                            img(src='' alt='')
-                                            span A
-                                        .b-teams__player-name Симоненко Максим
-                                        .b-teams__player-info г. Барнаул, 27 лет
-                                        .b-teams__player-text
-                                            b Статистика
-                                            span Сезон 2019-2020
-                                        .b-teams__player-data
-                                            div
-                                                b Г
-                                                | 15
-                                            div
-                                                b П
-                                                | 7
-                                            div
-                                                b О
-                                                | 25
+                            .b-teams__player-body
+                                .b-teams__player-item
+                                    div 99
+                                    div
+                                        img(src='./images/coach@2x.jpg' alt='')
+                                        | Симоненко Максим
+                                    div 12.12.1987
+                                    div
+                                        .b-teams__player-more.js-show-player Подробнее
+                                        .b-teams__player-box
+                                            .b-teams__player-avatar
+                                                img(src='./images/player@2x.jpg' alt='')
+                                                span A
+                                            .b-teams__player-name Симоненко Максим
+                                            .b-teams__player-info г. Барнаул, 27 лет
+                                            .b-teams__player-text
+                                                b Статистика
+                                                span Сезон 2019-2020
+                                            .b-teams__player-data
+                                                div
+                                                    b Г
+                                                    = ' '
+                                                    | 15
+                                                div
+                                                    b П
+                                                    = ' '
+                                                    | 7
+                                                div
+                                                    b О
+                                                    = ' '
+                                                    | 25
+                                            .b-teams__player-close.js-close-player
+                                .b-teams__player-item
+                                    div 99
+                                    div
+                                        img(src='./images/coach@2x.jpg' alt='')
+                                        | Симоненко Максим
+                                    div 12.12.1987
+                                    div
+                                        .b-teams__player-more.js-show-player Подробнее
+                                        .b-teams__player-box
+                                            .b-teams__player-avatar
+                                                img(src='./images/player@2x.jpg' alt='')
+                                                span A
+                                            .b-teams__player-name Симоне Максим
+                                            .b-teams__player-info г. Барнаул, 28 лет
+                                            .b-teams__player-text
+                                                b Статистика
+                                                span Сезон 2019-2020
+                                            .b-teams__player-data
+                                                div
+                                                    b Г
+                                                    = ' '
+                                                    | 20
+                                                div
+                                                    b П
+                                                    = ' '
+                                                    | 72
+                                                div
+                                                    b О
+                                                    = ' '
+                                                    | 02
+                                            .b-teams__player-close.js-close-player
 
+                    .b-teams__players
+                        .b-teams__player-type Защитники
+                        .b-teams__player-table
+                            .b-teams__player-header
+                                div №
+                                div Имя
+                                div Дата рождения
+                                div
+                            .b-teams__player-body
+                                .b-teams__player-item
+                                    div 99
+                                    div
+                                        img(src='./images/coach@2x.jpg' alt='')
+                                        | Симоненко Максим
+                                    div 12.12.1987
+                                    div
+                                        .b-teams__player-more.js-show-player Подробнее
+                                        .b-teams__player-box
+                                            .b-teams__player-avatar
+                                                img(src='./images/player@2x.jpg' alt='')
+                                                span A
+                                            .b-teams__player-name Симоненко Максим
+                                            .b-teams__player-info г. Барнаул, 27 лет
+                                            .b-teams__player-text
+                                                b Статистика
+                                                span Сезон 2019-2020
+                                            .b-teams__player-data
+                                                div
+                                                    b Г
+                                                    = ' '
+                                                    | 15
+                                                div
+                                                    b П
+                                                    = ' '
+                                                    | 7
+                                                div
+                                                    b О
+                                                    = ' '
+                                                    | 25
+                                            .b-teams__player-close.js-close-player
+                                .b-teams__player-item
+                                    div 99
+                                    div
+                                        img(src='./images/coach@2x.jpg' alt='')
+                                        | Симоненко Максим
+                                    div 12.12.1987
+                                    div
+                                        .b-teams__player-more.js-show-player Подробнее
+                                        .b-teams__player-box
+                                            .b-teams__player-avatar
+                                                img(src='./images/player@2x.jpg' alt='')
+                                                span A
+                                            .b-teams__player-name Симоне Максим
+                                            .b-teams__player-info г. Барнаул, 28 лет
+                                            .b-teams__player-text
+                                                b Статистика
+                                                span Сезон 2019-2020
+                                            .b-teams__player-data
+                                                div
+                                                    b Г
+                                                    = ' '
+                                                    | 20
+                                                div
+                                                    b П
+                                                    = ' '
+                                                    | 72
+                                                div
+                                                    b О
+                                                    = ' '
+                                                    | 02
+                                            .b-teams__player-close.js-close-player
+                .b-teams__list
+                    .b-teams__games
+                        .b-teams__game
+                            .b-table
+                                .b-table__title-time 2 сен, пн
+                                .b-table__item
+                                    div 21:10
+                                    div
+                                        p
+                                            span
+                                                img(src='./images/teams/team_1-lg.png' alt='')
+                                            | Балтика -
+                                        p
+                                            span
+                                                img(src='./images/teams/team_2-lg.png' alt='')
+                                            | Красные Крылья
+                                    div Счет 5 : 0
+                                    div
+                                        .b-table__label.b-table__label--complete завершен
+                                .b-table__item
+                                    div 21:10
+                                    div
+                                        p
+                                            span
+                                                img(src='./images/teams/team_1-lg.png' alt='')
+                                            | Балтика -
+                                        p
+                                            span
+                                                img(src='./images/teams/team_2-lg.png' alt='')
+                                            | Красные Крылья
+                                    div Счет 5 : 0
+                                    div
+                                        .b-table__label.b-table__label--soon скоро
+                            .b-table
+                                .b-table__title-time 2 сен, пн
+                                .b-table__item
+                                    div 21:10
+                                    div
+                                        p
+                                            span
+                                                img(src='./images/teams/team_1-lg.png' alt='')
+                                            | Балтика -
+                                        p
+                                            span
+                                                img(src='./images/teams/team_2-lg.png' alt='')
+                                            | Красные Крылья
+                                    div Счет 5 : 0
+                                    div
+                                        .b-table__label.b-table__label--complete завершен
+                                .b-table__item
+                                    div 21:10
+                                    div
+                                        p
+                                            span
+                                                img(src='./images/teams/team_1-lg.png' alt='')
+                                            | Балтика -
+                                        p
+                                            span
+                                                img(src='./images/teams/team_2-lg.png' alt='')
+                                            | Красные Крылья
+                                    div Счет 5 : 0
+                                    div
+                                        .b-table__label.b-table__label--soon скоро
 
 
 

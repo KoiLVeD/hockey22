@@ -22,7 +22,10 @@
   }
   & > div {
     padding: 4px 0;
+    flex-flow: row nowrap;
     flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0px;
     font-size: 14px;
     font-weight: 300;
     color: $black;
@@ -69,4 +72,24 @@
 
 .b-table__item-icon--video {
 
+}
+
+.b-table__label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $white;
+  padding: 0 10px;
+  text-align: center;
+  border-radius: 23px;
+  margin-right: 20px;
+}
+
+.b-table__label--complete {
+  background-color: $cornflower-blue;
+}
+
+.b-table__label--soon {
+  background-color: $butterscotch;
 }

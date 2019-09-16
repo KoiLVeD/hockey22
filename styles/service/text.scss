@@ -7,6 +7,10 @@ h1 {
   font-weight: bold;
   color: $black;
   margin-bottom: 30px;
+
+  @include bp($bp-640) {
+    margin-bottom: 20px;;
+  }
 }
 h3 {
   font-family: $Ubuntu;

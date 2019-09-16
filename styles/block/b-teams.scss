@@ -18,14 +18,27 @@
 
 .b-teams__tabs {
   margin-bottom: 30px;
+
+  .tab {
+    justify-content: center;
+  }
+  .tab__item {
+    width: 135px;
+  }
 }
 
 .b-teams__list {
+  display: none;
 
+  &.active {
+    display: block;
+  }
 }
 
 .b-teams__players {
-
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
 }
 
 .b-teams__player-type {
@@ -125,4 +138,151 @@
   height: 30px;
   border-radius: 23px;
   background-color: $cornflower-blue;
+  cursor: pointer;
+}
+
+.b-teams__player-box {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 216px;
+  height: 317px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px 0 rgba(64, 105, 207, 0.26);
+  background-color: $white;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s ease-in-out all;
+}
+
+.b-teams__player-box--show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.b-teams__player-avatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  span {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 23px;
+    background-color: $cornflower-blue;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+  }
+}
+
+.b-teams__player-name {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.b-teams__player-info {
+  font-size: 12px;
+  font-weight: 300;
+  color: #818181;
+  line-height: 14px;
+  margin-bottom: 29px;
+  text-align: center;
+}
+
+.b-teams__player-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+
+  b, span {
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  b {
+    font-weight: 500;
+  }
+  span {
+    font-weight: 300;
+    color: #818181;
+  }
+}
+
+.b-teams__player-data {
+  display: flex;
+  & > div {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+
+    &:not(:first-child) {
+      border-left: 1px solid $very-light-blue;
+    }
+
+    b {
+      font-weight: 500;
+    }
+  }
+}
+
+.b-teams__player-close {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 23px;
+  background-color: $cornflower-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    display: block;
+    @include svg-close-white-sm;
+  }
+}
+
+.b-teams__game {
+  .b-table__item {
+    & > div {
+      &:nth-child(1) {
+        flex-grow: 0;
+        flex-basis: 65px;
+      }
+      &:nth-child(2) {
+        max-width: 330px;
+      }
+      &:nth-child(3) {
+        flex-grow: 0;
+        flex-basis: 100px;
+      }
+      &:nth-child(4) {
+        text-align: right;
+      }
+    }
+  }
 }

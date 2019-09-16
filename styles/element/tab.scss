@@ -34,6 +34,11 @@
   &:last-child {
     border-radius: 0 23px 23px 0;
   }
+
+  &.show {
+    background-color: $cornflower-blue;
+    color: $white;
+  }
 }
 
 .tab__item--active {
