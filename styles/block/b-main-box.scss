@@ -4,6 +4,10 @@
   background-color: $white;
   padding: 20px;
 
+  @include bp($bp-640) {
+    border-radius: 25px 25px 0 0;
+  }
+
   &:not(:first-child) {
     margin-top: 20px;
   }

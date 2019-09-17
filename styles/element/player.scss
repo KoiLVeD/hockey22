@@ -49,6 +49,17 @@
     margin-right: 50px;
   }
 
+  @include bp($bp-640) {
+    margin-right: 0;
+  }
+
+  @include bp($bp-360) {
+    position: absolute;
+    bottom: 0;
+    left: 61px;
+  }
+
+
   span {
     display: block;
     font-size: 12px;
@@ -56,7 +67,11 @@
     line-height: 1;
     color: #9d9d9d;
     margin-bottom: 9px;
+    @include bp($bp-360) {
+      display: none;
+    }
   }
+
   a {
     display: block;
     font-size: 14px;

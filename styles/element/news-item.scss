@@ -14,6 +14,10 @@
   height: 80px;
   flex-shrink: 0;
 
+  @include bp($bp-540) {
+    display: none;
+  }
+
   img {
     position: absolute;
     width: 100%;
@@ -26,12 +30,20 @@
 .news-item__text {
   padding-left: 20px;
   flex-grow: 1;
+  @include bp($bp-540) {
+    padding-left: 0;
+  }
+
   h3 {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.2;
-    color: #070707;
     margin-bottom: 6px;
+
+    @include bp($bp-540) {
+      font-size: 18px;
+      line-height: 1.33;
+    }
   }
   p {
     font-size: 14px;
@@ -44,18 +56,40 @@
 
 .news-item__control {
   display: flex;
-  span, a {
+
+  span, a, button {
     font-size: 14px;
     font-weight: 300;
     line-height: 1;
-    color: $black;
+    white-space: nowrap;
   }
 
   span {
     margin-right: 60px;
+
+    @include bp($bp-640) {
+      margin-right: 20px;
+    }
   }
 
-  a {
+  button {
     color: $cornflower-blue;
+
+    @include bp($bp-540) {
+      position: relative;
+      font-size: 0;
+      //margin-left: auto;
+
+      &:after {
+        position: absolute;
+        content: '...';
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        bottom: 0;
+        left: 0;
+      }
+
+    }
   }
 }

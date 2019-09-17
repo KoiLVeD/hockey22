@@ -1,7 +1,6 @@
 import tingle from 'tingle.js'
 
 const modalCalendar = new tingle.modal({
-  footer: true,
   stickyFooter: false,
   closeMethods: ['overlay', 'button', 'escape'],
   cssClass: ['custom-popup'],
@@ -20,9 +19,8 @@ const modalCalendar = new tingle.modal({
 });
 
 const modalNews = new tingle.modal({
-  footer: true,
   stickyFooter: false,
-  closeMethods: ['overlay', 'button', 'escape'],
+  closeMethods: ['overlay', 'escape'],
   cssClass: ['custom-popup', 'custom-popup--sm'],
 });
 

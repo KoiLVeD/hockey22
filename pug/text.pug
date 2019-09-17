@@ -12,7 +12,7 @@ block content
                     span Название текстовое страницы
             h1 Название текстовое страницы
             .row
-                main.col-lg-12
+                main.col-lg-12.col-md-12.col-sm-12.col-xs-12
                     .b-main-box
                         .b-typography
                             time 28 сентября 2019
@@ -37,8 +37,18 @@ block content
                             h3 Нервные клетки миллионов фанатов «Вашингтона»  - h3
                             p Нервные клетки миллионов фанатов «Вашингтона» были оперативно спасены. Овечкин на протяжении всей своей карьеры демонстрировал стойкий дух и много раз играл через боль. Два года назад жена Александра Анастасия Шубская разместила в своем «инстаграме» фотографию травмированной ноги мужа после поражения «Кэпиталз» в плей-офф «Питтсбургу». Тогда даже критики Ови выразили игроку респект.
                             .b-typography__video
-                                img(src='' alt='')
+                                .b-typography__video-default
+                                    .b-typography__video-play.js-play-video
+                                    video(preload='auto')
+                                        source(src='./video/Forest_15_3b_Videvo (convert-video-online.com).mp4' type="video/mp4")
+                                        source(src='./video/Forest_15_3b_Videvo (convert-video-online.com).webm' type="video/webm")
                                 p Видео: Драка Александра Овечкина с судьей
+
+                            .b-typography__video
+                                .b-typography__video-yt
+                                    iframe(width="560" height="315" src="https://www.youtube.com/embed/o_Ay_iDRAbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                                p Видео: Драка Александра Овечкина с судьей
+
                             p Нервные клетки миллионов фанатов «Вашингтона» были оперативно спасены. Овечкин на протяжении всей своей карьеры демонстрировал стойкий дух и много раз играл через боль. Два года назад жена Александра Анастасия Шубская разместила в своем «инстаграме» фотографию травмированной ноги мужа после поражения «Кэпиталз» в плей-офф «Питтсбургу». Тогда даже критики Ови выразили игроку респект.
                             hr
                             .b-typography__footer

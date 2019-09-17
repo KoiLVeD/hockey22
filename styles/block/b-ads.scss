@@ -13,18 +13,28 @@
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 5px;
+    @include bp($bp-640) {
+      margin-bottom: 4px;
+    }
   }
   p {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 10px;
+
+    @include bp($bp-640) {
+      font-size: 17px;
+      line-height: 1.41;
+      margin-bottom: 9px;
+    }
   }
 
   a {
     display: block;
     font-size: 14px;
     font-weight: 300;
+    line-height: 1;
     color: $cornflower-blue;
   }
 
@@ -33,7 +43,7 @@
   }
 
   &:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 19px;
   }
 }
 

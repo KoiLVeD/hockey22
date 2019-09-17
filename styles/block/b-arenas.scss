@@ -5,13 +5,41 @@
   margin-top: 10px;
   margin-bottom: 54px;
 
+  @include bp($bp-ipad-1024) {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
   .swiper-container {
     width: 100%;
     margin: 0 70px;
+
+    @include bp($bp-ipad-1024) {
+      margin: 0;
+    }
+  }
+
+  .swiper-wrapper {
+    @include bp($bp-ipad-1024) {
+      height: auto;
+      flex-direction: column;
+    }
+  }
+
+  .swiper-slide {
+    @include bp($bp-ipad-1024) {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
   }
 
   .custom-button-slider {
     border-color: $cornflower-blue;
+
+    @include bp($bp-ipad-1024) {
+      display: none;
+    }
 
     &:after {
       @include svg-arrow-left-blue-slider;
@@ -39,12 +67,40 @@
   border: solid 1px $very-light-blue;
   padding: 19px;
 
+  @include bp($bp-ipad-1024) {
+    height: auto;
+    display: flex;
+  }
+
+  @include bp($bp-640) {
+    display: block;
+  }
+
   img {
     display: block;
     max-width: 100%;
     height: auto;
     margin-bottom: 19px;
     border-radius: 10px;
+
+    @include bp($bp-ipad-1024) {
+      width: calc(100% - 280px - 30px);
+      margin-bottom: 0;
+    }
+
+    @include bp($bp-640) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.b-arenas__wrap-info {
+  @include bp($bp-ipad-1024) {
+    padding-left: 29px;
+  }
+  @include bp($bp-640) {
+    padding-left: 0;
   }
 }
 
@@ -53,10 +109,18 @@
   font-weight: 300;
   line-height: 1.3;
   margin-bottom: 10px;
+
+  @include bp($bp-640) {
+    font-size: 18px;
+    line-height: 1.22;
+  }
 }
 
 .b-arenas__address {
   margin-bottom: 14px;
+  @include bp($bp-640) {
+    margin-bottom: 6px;
+  }
   p {
     font-size: 14px;
     font-weight: 300;

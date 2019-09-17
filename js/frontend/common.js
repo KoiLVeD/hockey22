@@ -43,5 +43,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   document.addEventListener('click', clickOutside, false);
+
+  let buttonPlayVideo = document.querySelector('.js-play-video');
+
+  buttonPlayVideo.addEventListener('click', function() {
+    let videoTag = buttonPlayVideo.nextElementSibling;
+    buttonPlayVideo.classList.add('hidden')
+    videoTag.setAttribute('controls', 'controls')
+    videoTag.play()
+  });
 });
 

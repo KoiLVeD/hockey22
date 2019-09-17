@@ -9,6 +9,12 @@ footer {
       margin-top: 40px;
       height: auto;
     }
+
+    .b-header__logo-text {
+      @include bp($bp-640) {
+        display: block;
+      }
+    }
   }
 
   .b-header__logo {

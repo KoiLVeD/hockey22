@@ -85,11 +85,19 @@
   @include bp($bp-640) {
     padding-top: 0;
   }
+
   .player {
     &:not(:first-child) {
       margin-top: 19px;
       padding-top: 19px;
       border-top: 1px solid $very-light-blue;
+    }
+
+    &:last-child {
+      @include bp($bp-360) {
+        position: relative;
+        padding-bottom: 20px;
+      }
     }
   }
 }

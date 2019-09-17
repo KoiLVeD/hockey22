@@ -1,5 +1,5 @@
 .b-popup {
-
+ display: none;
 }
 
 .b-popup__close {
@@ -11,9 +11,39 @@
   align-items: center;
   width: 24px;
   height: 24px;
+
   &:after {
     content: '';
     display: block;
     @include svg-close-popup;
+  }
+}
+
+.custom-popup {
+  &.tingle-modal {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: none;
+  }
+
+  .tingle-modal-box {
+    width: 100%;
+  }
+
+  .tingle-modal-box__content {
+    padding: 0;
+  }
+
+  .tingle-modal__closeIcon {
+    display: none;
+  }
+
+  .tingle-modal__closeLabel {
+    display: none;
+  }
+}
+
+.custom-popup--sm {
+  .tingle-modal-box {
+    max-width: 680px;
   }
 }
