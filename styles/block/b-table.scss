@@ -64,14 +64,29 @@
 .b-table__item-icon {
   width: 20px;
   height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  &:after {
+    content: '';
+    display: block;
+  }
   &:not(:first-child) {
     margin-left: 10px;
   }
 }
 
 .b-table__item-icon--video {
+  &:after {
+    @include svg-i-play;
+  }
+}
 
+.b-table__item-icon--docs {
+  &:after {
+    @include svg-i-docs;
+  }
 }
 
 .b-table__label {

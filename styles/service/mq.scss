@@ -1,10 +1,11 @@
 $media-queries: true;
 
-$bp-2k: 1921px;
+
 $bp-1920: 1920px;
 $bp-1440: 1440px;
 $bp-1366: 1366px;
 $bp-1280: 1280px;
+$bp-1240: 1240px;
 $bp-ipad-1024: 1024px;
 $bp-ipad-768: 768px;
 $bp-640: 640px;
@@ -15,18 +16,12 @@ $bp-375: 375px;
 $bp-360: 360px;
 $bp-320: 320px;
 
+$bp-min-767: 767px;
+$bp-min-992: 992px;
+
 @mixin bp($point) {
   @if ($media-queries) {
     // start desktop
-
-    @if $point == $bp-2k {
-      @media // Very Large Screens
-      only screen and (min-width: #{$bp-2k}) {
-        @content;
-      }
-    }
-
-
     @if $point == $bp-1920 {
       @media // Desktops and Laptops
       only screen and (max-width: #{$bp-1920}) {
@@ -48,6 +43,12 @@ $bp-320: 320px;
     @if $point == $bp-1280 {
       @media // Desktops and Laptops
       only screen and (max-width: #{$bp-1280}) {
+        @content;
+      }
+    }
+    @if $point == $bp-1240 {
+      @media // Desktops and Laptops
+      only screen and (max-width: #{$bp-1240}) {
         @content;
       }
     }
@@ -109,6 +110,22 @@ $bp-320: 320px;
     @if $point == $bp-320 {
       @media // iPad (portrait and landscape)
       only screen and (max-width: #{$bp-320}) {
+        @content;
+      }
+    }
+
+    // min
+
+    @if $point == $bp-min-767 {
+      @media
+      only screen and (min-width: #{$bp-min-767}) {
+        @content;
+      }
+    }
+
+    @if $point == $bp-min-992 {
+      @media
+      only screen and (min-width: #{$bp-min-992}) {
         @content;
       }
     }

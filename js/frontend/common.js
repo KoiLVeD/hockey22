@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (scrollbar) {
     const simpleBar = new SimpleBar(scrollbar);
+    // simpleBar.getScrollElement().addEventListener('scroll', function(el) {
+    //   console.log(el);
+    //   console.log(this);
+    //
+    //
+    // });
   }
 
   [...btnShowPlayers].forEach((button) => {
@@ -46,11 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let buttonPlayVideo = document.querySelector('.js-play-video');
 
-  buttonPlayVideo.addEventListener('click', function() {
-    let videoTag = buttonPlayVideo.nextElementSibling;
-    buttonPlayVideo.classList.add('hidden')
-    videoTag.setAttribute('controls', 'controls')
-    videoTag.play()
-  });
+  if (buttonPlayVideo) {
+    buttonPlayVideo.addEventListener('click', function() {
+      let videoTag = buttonPlayVideo.nextElementSibling;
+      buttonPlayVideo.classList.add('hidden')
+      videoTag.setAttribute('controls', 'controls')
+      videoTag.play()
+    });
+  }
 });
 

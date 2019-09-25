@@ -47,3 +47,19 @@
     max-width: 680px;
   }
 }
+
+.custom-popup--lg {
+  @include bp($bp-1240) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include bp($bp-640) {
+    padding: 0;
+  }
+
+  .tingle-modal-box {
+    max-width: 1300px;
+    margin-bottom: 40px;
+  }
+}

@@ -2,6 +2,7 @@ body {
   font-family: $Ubuntu;
   background-color: $very-light-blue;
   color: $black;
+  min-width: 320px;
 
   &.error-not-found {
     background-color: $cornflower-blue;

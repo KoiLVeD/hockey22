@@ -5,7 +5,8 @@
 .home-page__header {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  max-height: 900px;
 }
 
 .home-page__fullpage {
@@ -31,19 +32,16 @@
   height: 682px;
   background-image: url("../images/fullpage/player.png");
   bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  left: 59%;
+  transform: translate(-50%, 0);
 }
 
 .home-page__puck {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 115px;
+  top: 30%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+  width: 151px;
   height: 113px;
   background-image: url("../images/fullpage/puck.png");
 }

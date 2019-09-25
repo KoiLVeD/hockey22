@@ -8,7 +8,7 @@ $(document).ready(function () {
   linkTab.on('click', function (e) {
     let $this = $(this);
     let tabActive = $this.closest(elClosest).find('.js-tab-item');
-    let contentTab = $this.closest(elClosest).find('.js-tab-content > div');
+    let contentTab = $this.closest(elClosest).find('.js-tab-contents .js-tab-content');
 
     tabActive.find('div').removeClass('tab__item--active');
     $this.addClass('tab__item--active');
