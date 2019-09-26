@@ -24,6 +24,11 @@
   @include bp($bp-1240)  {
     margin-bottom: 30px;
   }
+
+  @include bp($bp-640) {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 }
 
 .b-calendar__selectbox {
@@ -32,6 +37,10 @@
 
   @include bp($bp-1240)  {
     width: 185px;
+  }
+
+  @include bp($bp-640) {
+    width: 100%;
   }
 }
 
@@ -56,6 +65,11 @@
     display: block;
     font-size: 18px;
   }
+
+  @include bp($bp-640) {
+    font-size: 16px;
+    top: 78%;
+  }
 }
 
 .b-calendar__tabs {
@@ -73,6 +87,17 @@
 .b-calendar__arrows {
   display: flex;
   margin-left: 40px;
+
+  @include bp($bp-640) {
+    width: 100%;
+    margin-left: 0;
+    justify-content: space-between;
+    margin-top: 12px;
+
+    .b-calendar__arrows-item {
+      border-color: transparent;
+    }
+  }
 }
 
 .b-calendar__arrows-item {

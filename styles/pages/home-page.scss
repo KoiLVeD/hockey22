@@ -55,12 +55,14 @@
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 
 .home-page__block {
   h2 {
     font-size: 24px;
+    line-height: 28px;
     font-weight: bold;
     color: $white;
     margin-bottom: 38px;
@@ -69,6 +71,11 @@
 
 .home-page__block--slider {
   width: 260px;
+
+
+  h2 {
+    margin-bottom: 18px;
+  }
 }
 
 .home-page__games {

@@ -55,7 +55,11 @@
   }
 
   @include bp($bp-640) {
-    padding: 0;
+
+
+    &.tingle-modal--overflow {
+      padding: 0;
+    }
   }
 
   .tingle-modal-box {

@@ -82,6 +82,7 @@
     "imagemin-pngquant": "^8.0.0",
     "stylelint-scss": "^3.10.0",
     "stylelint-selector-bem-pattern": "^2.1.0",
+    "tablesort": "^5.1.0",
     "tingle.js": "^0.15.1"
   }
 }
