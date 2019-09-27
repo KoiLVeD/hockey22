@@ -57,7 +57,7 @@
 .news-item__control {
   display: flex;
 
-  span, a, button {
+  span, button {
     font-size: 14px;
     font-weight: 300;
     line-height: 1;
@@ -73,7 +73,10 @@
   }
 
   button {
+    outline: none;
+    border: none;
     color: $cornflower-blue;
+    cursor: pointer;
 
     @include bp($bp-540) {
       position: relative;

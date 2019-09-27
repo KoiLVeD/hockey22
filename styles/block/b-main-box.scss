@@ -1,13 +1,4 @@
 .b-main-box {
-  position: relative;
-  border-radius: 15px;
-  background-color: $white;
-  padding: 20px;
-
-  @include bp($bp-640) {
-    border-radius: 25px 25px 0 0;
-  }
-
   &:not(:first-child) {
     margin-top: 20px;
   }
@@ -21,10 +12,77 @@
   }
 }
 
+.b-main-box__wrapper {
+  position: relative;
+  border-radius: 15px;
+  background-color: $white;
+  padding: 20px;
+
+  @include bp($bp-640) {
+    border-radius: 25px 25px 0 0;
+  }
+}
+
+.b-main-box__wrap {
+  .b-main-box__list {
+    display: none;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+
+      @include bp($bp-ipad-1024) {
+        margin-top: 34px;
+      }
+    }
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.b-main-box__tab-wrap {
+  .b-main-box__wrap {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
 .b-main-box__control {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+
+  @include bp($bp-540) {
+    flex-direction: column;
+
+    .tab__title {
+      display: none;
+    }
+
+    .tab {
+      &:nth-child(1) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .tab__wrap {
+      width: 100%;
+    }
+
+    .tab__item {
+      flex-grow: 1;
+    }
+  }
+
+  .tab__item {
+    @include bp($bp-ipad-768) {
+      padding: 0 14px;
+    }
+  }
 }
 
 .b-main-box__btn {
@@ -45,6 +103,10 @@
   .b-table {
     &:not(:first-child) {
       margin-top: 20px;
+
+      @include bp($bp-ipad-1024) {
+        margin-top: 34px;
+      }
     }
   }
 }
@@ -52,6 +114,10 @@
 .b-main-box__select {
   width: 270px;
 
+  @include bp($bp-540) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 

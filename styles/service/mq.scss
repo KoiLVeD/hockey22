@@ -8,6 +8,7 @@ $bp-1280: 1280px;
 $bp-1240: 1240px;
 $bp-ipad-1024: 1024px;
 $bp-ipad-768: 768px;
+$bp-720: 720px;
 $bp-640: 640px;
 $bp-540: 540px;
 $bp-480: 480px;
@@ -63,6 +64,13 @@ $bp-min-992: 992px;
     @if $point == $bp-ipad-768 {
       @media // iPad (portrait and landscape)
       only screen and (max-width: #{$bp-ipad-768}) {
+        @content;
+      }
+    }
+
+    @if $point == $bp-720 {
+      @media
+      only screen and (max-width: #{$bp-720}) {
         @content;
       }
     }

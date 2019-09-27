@@ -9,17 +9,40 @@
 
   select {
     width: 150px;
+
+    @include bp($bp-1240) {
+      width: 124px;
+    }
   }
   .selectbox {
     width: 150px;
+
+    @include bp($bp-1240) {
+      width: 124px;
+    }
+  }
+
+  .tab__item {
+    @include bp($bp-1240) {
+      padding: 0 12px;
+    }
+
+    @include bp($bp-ipad-1024) {
+      padding: 0 14px;
+    }
   }
 }
 
 .b-list-player__list {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
   .player {
     &:not(:first-child) {
-      margin-top: 20px;
-      padding-top: 19px;
+      margin-top: 14px;
+      padding-top: 13px;
       border-top: 1px solid $very-light-blue;
     }
   }
