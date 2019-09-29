@@ -7,18 +7,31 @@
   justify-content: space-between;
   margin-bottom: 30px;
 
+  @include bp($bp-480) {
+    flex-wrap: wrap;
+  }
+
   select {
     width: 150px;
 
     @include bp($bp-1240) {
       width: 124px;
     }
+
+    @include bp($bp-480) {
+      width: 100%;
+    }
   }
+
   .selectbox {
     width: 150px;
 
     @include bp($bp-1240) {
       width: 124px;
+    }
+
+    @include bp($bp-480) {
+      width: 100%;
     }
   }
 
@@ -29,6 +42,23 @@
 
     @include bp($bp-ipad-1024) {
       padding: 0 14px;
+    }
+
+    @include bp($bp-480) {
+      flex-grow: 1;
+    }
+  }
+
+  .tab {
+    @include bp($bp-480) {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+
+  .tab__wrap {
+    @include bp($bp-480) {
+      width: 100%;
     }
   }
 }

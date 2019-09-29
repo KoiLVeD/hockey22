@@ -20,13 +20,25 @@
 }
 
 .custom-popup {
+  min-width: 320px;
+  padding-bottom: 30px;
+
   &.tingle-modal {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: none;
+
+    @include bp($bp-640) {
+      padding: 0;
+    }
   }
 
   .tingle-modal-box {
     width: 100%;
+    border-radius: 10px;
+
+    @include bp($bp-640) {
+      border-radius: 0;
+    }
   }
 
   .tingle-modal-box__content {
@@ -64,6 +76,5 @@
 
   .tingle-modal-box {
     max-width: 1300px;
-    margin-bottom: 40px;
   }
 }

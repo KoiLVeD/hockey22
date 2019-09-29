@@ -102,8 +102,10 @@
       font-weight: normal;
       line-height: normal;
       color: $white;
+      transition: .3s ease-in-out all;
 
       &:hover {
+        color: $cornflower-blue!important;
         &:after {
           width: 100%;
           left: 0;
@@ -114,12 +116,21 @@
         width: 0;
         left: 50%;
         transition: all 0.25s ease-in-out;
-        height: 1px;
+        height: 2px;
         opacity: 0.2;
-        background-color: #fff;
+        background-color: $cornflower-blue!important;
         position: absolute;
         bottom: -5px;
         content: '';
+      }
+
+      &.active {
+        color: $cornflower-blue!important;
+        &:after {
+          width: 100%;
+          left: 0;
+          opacity: 1;
+        }
       }
     }
   }

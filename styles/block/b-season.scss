@@ -30,6 +30,16 @@
   }
 }
 
+.b-season__content {
+  .b-season__list {
+    display: none;
+
+    &.is-active {
+      display: flex;
+    }
+  }
+}
+
 .b-season__list {
   display: flex;
   flex-wrap: wrap;
@@ -47,6 +57,7 @@
   background-size: cover;
   background-image: url("../images/ice_in_card@2x.png");
   overflow: hidden;
+  transition: .3s ease-in-out all;
 
   @include bp($bp-ipad-1024) {
     width: calc(100%/3 - 20px);
@@ -61,6 +72,7 @@
   }
 
   &:hover {
+    box-shadow: 0 4px 12px 0 rgba(64, 105, 207, 0.17);
     .b-season__logo {
       svg path {
         fill: $cornflower-blue;

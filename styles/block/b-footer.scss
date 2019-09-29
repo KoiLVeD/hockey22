@@ -69,6 +69,7 @@ footer {
 
   @include bp($bp-640) {
     padding: 19px 20px 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -86,7 +87,7 @@ footer {
   }
 
   @include bp($bp-640) {
-    top: 50%;
+    top: 153px;
     left: 50%;
     transform: translate(-50%, -50%);
     right: auto;

@@ -1,29 +1,44 @@
 .b-statistic-game {
+  padding: 20px;
   background-color: $white;
+  border-radius: 10px;
 }
 
 .b-statistic-game__title {
   margin-bottom: 20px;
+  @include bp($bp-640) {
+    margin-bottom: 10px;
+  }
   p {
     font-size: 18px;
     font-weight: 500;
     text-align: center;
     margin-bottom: 6px;
+    line-height: 1;
+
+    @include bp($bp-640) {
+      text-align: left;
+    }
   }
 
   span {
     display: block;
     font-size: 14px;
     font-weight: 300;
-    color: #909090;
+    color: $brown-grey;
     text-align: center;
     line-height: 16px;
+
+    @include bp($bp-640) {
+      text-align: left;
+    }
   }
 }
 
 .b-statistic-game__account {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
   div {
     width: 33.3333%;
   }
@@ -67,6 +82,12 @@
 
 .b-statistic-game__period {
 
+  &:last-child {
+    .b-statistic-game__period-events {
+      padding-bottom: 0;
+    }
+  }
+
 }
 
 .b-statistic-game__period-title {
@@ -78,11 +99,16 @@
   background-color: $pale-grey;
   padding-left: 20px;
 
+  @include bp($bp-640) {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 .b-statistic-game__period-events {
   padding: 7px 0;
   border-bottom: 1px solid $very-light-blue;
+
   &:last-child {
     border-bottom: none;
   }
@@ -92,6 +118,13 @@
   .b-statistic-game__period-event {
     flex-direction: row-reverse;
   }
+
+  .b-statistic-game__period-type {
+    @include bp($bp-640) {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
 }
 
 .b-statistic-game__period-event {
@@ -99,6 +132,10 @@
   align-items: center;
   padding: 0 20px;
   height: 32px;
+
+  @include bp($bp-640) {
+    padding: 0;
+  }
 }
 
 .b-statistic-game__period-time {
@@ -140,4 +177,8 @@
   font-size: 12px;
   font-weight: 300;
   color: #909090;
+
+  @include bp($bp-640) {
+    margin-left: auto;
+  }
 }

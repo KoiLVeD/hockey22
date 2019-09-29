@@ -3,8 +3,6 @@ import SimpleBar from 'simplebar';
 document.addEventListener('DOMContentLoaded', function() {
   let mobileMenu = document.querySelector('.js-mobile-menu');
   let headerBlock = document.querySelector('.b-header');
-  let btnShowPlayers = document.querySelectorAll('.js-show-player');
-  let btnClosePlayers = document.querySelectorAll('.js-close-player');
 
   mobileMenu.addEventListener('click', function() {
     headerBlock.classList.toggle('active')
@@ -14,19 +12,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (scrollbar) {
     const simpleBar = new SimpleBar(scrollbar);
-    // simpleBar.getScrollElement().addEventListener('scroll', function(el) {
-    //   console.log(el);
-    //   console.log(this);
-    //
-    //
-    // });
   }
+
+  /* ----------------------------------------------------------- */
+  /* Всплывающие окно играка в попапе */
+  /* ----------------------------------------------------------- */
+  let btnShowPlayers = document.querySelectorAll('.js-show-player');
+  let btnClosePlayers = document.querySelectorAll('.js-close-player');
+  let teamBoxes = document.querySelectorAll('.b-teams__player-box');
 
   [...btnShowPlayers].forEach((button) => {
     button.addEventListener('click', () => {
+      [...teamBoxes].forEach((box) => {
+        box.classList.remove('b-teams__player-box--show')
+      });
       button.nextElementSibling.classList.add('b-teams__player-box--show')
     });
   });
+
   [...btnClosePlayers].forEach((button) => {
     button.addEventListener('click', () => {
       button.parentNode.classList.remove('b-teams__player-box--show')
@@ -47,11 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
   document.addEventListener('click', clickOutside, false);
-
+  /* ----------------------------------------------------------- */
+  /* Проигрование видео */
+  /* ----------------------------------------------------------- */
   let buttonPlayVideo = document.querySelector('.js-play-video');
-
   if (buttonPlayVideo) {
     buttonPlayVideo.addEventListener('click', function() {
       let videoTag = buttonPlayVideo.nextElementSibling;

@@ -1,9 +1,9 @@
 .b-breadcrumbs {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   @include bp($bp-ipad-1024) {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   @include bp($bp-640) {

@@ -3,7 +3,7 @@ extends _layout-black-header
 block title
     title Новости
 block content
-    .news-page
+    .common-page
         .container
             .b-breadcrumbs
                 .b-breadcrumbs__item
@@ -14,60 +14,83 @@ block content
             .row
                 main.col-lg-8.col-md-8.col-sm-12.col-xs-12
                     .b-main-box
-                        .b-main-box__list
-                            .news-item
-                                .news-item__img
-                                    img(src='./images/news_1@2x.jpg' alt='')
-                                .news-item__text
-                                    h3 Состоялась первая тренировка ХК «СкиФ»
-                                    p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
-                                    .news-item__control
-                                        span 24 ноября 2019
-                                        span Просмотров: 287
-                                        button.js-news-popup Читать подробнее
+                        .b-main-box__wrapper
+                            .b-main-box__list
+                                .news-item
+                                    .news-item__img
+                                        img(src='./images/news_1@2x.jpg' alt='')
+                                    .news-item__text
+                                        h3 Состоялась первая тренировка ХК «СкиФ»
+                                        p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
+                                        .news-item__control
+                                            span 24 ноября 2019
+                                            span Просмотров: 287
+                                            button.js-news-popup Читать подробнее
 
-                            .news-item
-                                .news-item__img
-                                    img(src='./images/news_1@2x.jpg' alt='')
-                                .news-item__text
-                                    h3 Состоялась первая тренировка ХК «СкиФ»
-                                    p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
-                                    .news-item__control
-                                        span 24 ноября 2019
-                                        span Просмотров: 287
-                                        button.js-news-popup Читать подробнее
+                                .news-item
+                                    .news-item__img
+                                        img(src='./images/news_1@2x.jpg' alt='')
+                                    .news-item__text
+                                        h3 Состоялась первая тренировка ХК «СкиФ»
+                                        p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
+                                        .news-item__control
+                                            span 24 ноября 2019
+                                            span Просмотров: 287
+                                            button.js-news-popup Читать подробнее
+                                .news-item
+                                    .news-item__img
+                                        img(src='./images/news_1@2x.jpg' alt='')
+                                    .news-item__text
+                                        h3 Состоялась первая тренировка ХК «СкиФ»
+                                        p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
+                                        .news-item__control
+                                            span 24 ноября 2019
+                                            span Просмотров: 287
+                                            button.js-news-popup Читать подробнее
 
-                        .b-main-box__btn
-                            a(href='').btn.btn--yellow Все новости
+                                .news-item
+                                    .news-item__img
+                                        img(src='./images/news_1@2x.jpg' alt='')
+                                    .news-item__text
+                                        h3 Состоялась первая тренировка ХК «СкиФ»
+                                        p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
+                                        .news-item__control
+                                            span 24 ноября 2019
+                                            span Просмотров: 287
+                                            button.js-news-popup Читать подробнее
+
+                            .b-main-box__btn
+                                a(href='').btn.btn--yellow Все новости
                 aside.col-lg-4.col-md-4.col-sm-12.col-xs-12
                     .b-main-box
-                        h2 Объявления
-                        .b-main-box__desc 86 объявлений
-                        .b-ads.custom-scrollbar.js-scrollbar
-                            .b-ads__item.b-ads__item--mark
-                                time 24 ноября 2019
-                                p Поиск игроков
-                                a(href='') Подробнее
-                            .b-ads__item
-                                time 24 ноября 2019
-                                p Поиск игроков
-                                a(href='') Подробнее
-                            .b-ads__item
-                                time 24 ноября 2019
-                                p Поиск игроков
-                                a(href='') Подробнее
-                            .b-ads__item.b-ads__item--mark
-                                time 24 ноября 2019
-                                p Поиск игроков
-                                a(href='') Подробнее
-                            .b-ads__item
-                                time 24 ноября 2019
-                                p Поиск игроков
-                                a(href='') Подробнее
-                            .b-ads__item
-                                time 24 ноября 2019
-                                p Поиск игроков
-                                a(href='') Подробнее
+                        .b-main-box__wrapper
+                            h2 Объявления
+                            .b-main-box__desc 86 объявлений
+                            .b-ads.custom-scrollbar.js-scrollbar
+                                .b-ads__item.b-ads__item--mark
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item.b-ads__item--mark
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
+                                .b-ads__item
+                                    time 24 ноября 2019
+                                    p Поиск игроков
+                                    a(href='') Подробнее
 
     .b-popup
         .b-popup__close.js-close-popup

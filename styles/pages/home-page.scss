@@ -8,6 +8,10 @@
       .b-main-box {
         margin-top: 0;
         margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -19,12 +23,30 @@
   height: 100vh;
   max-height: 900px;
   overflow: hidden;
+
+  @include bp($bp-640) {
+    min-height: 620px;
+  }
 }
 
 .home-page__fullpage {
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: $cornflower-blue;
+
+  @include bp($bp-640) {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 153px;
+      left: 0;
+      width: 100%;
+      height: 257px;
+      background-image: linear-gradient(to bottom, rgba(116, 163, 233, 0), $cornflower-blue);
+    }
+  }
 }
 
 .home-page__ice {
@@ -36,6 +58,9 @@
   background-size: cover;
   background-image: url("../images/fullpage/ice.png");
 
+  @include bp($bp-640) {
+    background-position: center;
+  }
 }
 
 .home-page__player {
@@ -46,6 +71,18 @@
   bottom: 0;
   left: 59%;
   transform: translate(-50%, 0);
+
+  @include bp($bp-ipad-1024) {
+    left: 72%;
+  }
+
+  @include bp($bp-640) {
+    background-size: cover;
+    left: 50%;
+    width: 100%;
+    height: 358px;
+    bottom: 144px;
+  }
 }
 
 .home-page__puck {
@@ -56,6 +93,12 @@
   width: 151px;
   height: 113px;
   background-image: url("../images/fullpage/puck.png");
+
+  @include bp($bp-640) {
+    width: 75px;
+    height: 56px;
+    background-size: cover;
+  }
 }
 
 .home-page__fullpage-bottom {
@@ -63,6 +106,14 @@
   width: 100%;
   left: 0;
   bottom: 50px;
+
+  @include bp($bp-ipad-1024) {
+    bottom: 40px;
+  }
+
+  @include bp($bp-640) {
+    bottom: 50px;
+  }
 
   .container {
     display: flex;
@@ -72,18 +123,42 @@
 }
 
 .home-page__block {
+  @include bp($bp-640) {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 154px;
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      background-color: $cornflower-blue;
+      z-index: 30;
+    }
+  }
   h2 {
     font-size: 24px;
     line-height: 28px;
     font-weight: bold;
     color: $white;
     margin-bottom: 38px;
+
+    @include bp($bp-ipad-1024) {
+      margin-bottom: 18px;
+    }
   }
 }
 
 .home-page__block--slider {
   width: 260px;
 
+  @include bp($bp-720) {
+    display: none;
+  }
 
   h2 {
     margin-bottom: 18px;
@@ -93,10 +168,15 @@
 .home-page__games {
   position: relative;
   display: flex;
+  z-index: 40;
 
   .games {
     &:not(:first-child) {
       margin-left: 20px;
+
+      @include bp($bp-414) {
+        margin-left: 10px;
+      }
     }
   }
 
@@ -118,7 +198,13 @@
 }
 
 .home-page__content {
+  position: relative;
   margin-top: 40px;
+  z-index: 40;
+
+  @include bp($bp-640) {
+    margin-top: -30px;
+  }
   main {
 
   }

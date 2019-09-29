@@ -1,6 +1,12 @@
 .b-main-box {
   &:not(:first-child) {
     margin-top: 20px;
+
+    @include bp($bp-640) {
+      .b-main-box__wrapper {
+        border-radius: 0;
+      }
+    }
   }
 
   h2 {
@@ -56,6 +62,9 @@
   justify-content: space-between;
   margin-bottom: 20px;
 
+  @include bp($bp-720) {
+    margin-bottom: 30px;
+  }
   @include bp($bp-540) {
     flex-direction: column;
 

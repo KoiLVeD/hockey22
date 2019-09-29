@@ -3,7 +3,7 @@ extends _layout-black-header
 block title
     title Кубок города ЛХЛ 2019
 block content
-    .news-page
+    .common-page
         .container
             .b-breadcrumbs
                 .b-breadcrumbs__item
@@ -16,461 +16,463 @@ block content
             .row
                 main.col-lg-12.col-md-12.col-sm-12.col-xs-12
                     .b-main-box
-                        .b-season-detail
-                            .b-season-detail__aside
-                                .b-season-detail__note
-                                    b Внимание!
-                                    p Финальный матч кубка города состоится 11.04.2019 в 19:00 на льду "Карандин-Арены", по окночанию финального матча пройдет торжественное награждение участников Чемпионата города во всех группах
-                                .b-season-detail__btn
-                                    .btn.btn--yellow Показать турнирную сетку
-                                    .btn.btn--blue.js-calendar-popup Календарь матчей
-                                .b-season-detail__section
-                                    h2 Состав дивизионов
-                                    ol
-                                        li Синтез
-                                        li Алтайские волки
-                                        li Титан
-                                        li Целинник
-                                        li Свирепые ежи
-                                        li Ястребы-2
-                                        li Легион
-                                        li Ястребы
-                                        li Скиф
-                                        li Балтика
-                                        li Прайд
-                                        li Павловск
-                                        li SportLife
-                                        li Неудержимые
-                                    span С командами своего дивизиона играют дважды, а с соперниками из другого по одной игре.
+                        .b-main-box__wrapper
+                            .b-season-detail
+                                .b-season-detail__aside
+                                    .b-season-detail__note
+                                        b Внимание!
+                                        p Финальный матч кубка города состоится 11.04.2019 в 19:00 на льду "Карандин-Арены", по окночанию финального матча пройдет торжественное награждение участников Чемпионата города во всех группах
+                                    .b-season-detail__btn
+                                        .btn.btn--yellow.js-statistic-popup Показать турнирную сетку
+                                        .btn.btn--blue.js-calendar-popup Календарь матчей
+                                        .btn.btn--blue.js-teams-popup 111
+                                    .b-season-detail__section
+                                        h2 Состав дивизионов
+                                        ol
+                                            li Синтез
+                                            li Алтайские волки
+                                            li Титан
+                                            li Целинник
+                                            li Свирепые ежи
+                                            li Ястребы-2
+                                            li Легион
+                                            li Ястребы
+                                            li Скиф
+                                            li Балтика
+                                            li Прайд
+                                            li Павловск
+                                            li SportLife
+                                            li Неудержимые
+                                        span С командами своего дивизиона играют дважды, а с соперниками из другого по одной игре.
 
 
 
-                                .b-season-detail__section
-                                    h2 Документы
-                                    ul
-                                        li
-                                            a(href='') Регламент чемпионата города группы "C","D" и "E" Сезон 2019 - 2020 гг.
-                                        li
-                                            a(href='') Форма завяки команды на Сезон 2019 - 2020 гг.
-                                        li
-                                            a(href='') Согласие на обработку персональных данных
+                                    .b-season-detail__section
+                                        h2 Документы
+                                        ul
+                                            li
+                                                a(href='') Регламент чемпионата города группы "C","D" и "E" Сезон 2019 - 2020 гг.
+                                            li
+                                                a(href='') Форма завяки команды на Сезон 2019 - 2020 гг.
+                                            li
+                                                a(href='') Согласие на обработку персональных данных
 
-                            .b-season-detail__main
-                                h2 Расписание матчей
-                                .b-season-detail__control
-                                    .tab.tab--radio
-                                        .tab__scroll
-                                            .tab__wrap
-                                                input(id='p-1' type='radio' name='group_1' checked)
-                                                label(for='p-1').tab__item Предварительный раунд
-                                                input(id='p-2' type='radio' name='group_1')
-                                                label(for='p-2').tab__item 1/4
-                                                input(id='p-3' type='radio' name='group_1')
-                                                label(for='p-3').tab__item Полуфинал
-                                                input(id='p-4' type='radio' name='group_1')
-                                                label(for='p-4').tab__item Матч за 3-е место
-                                                input(id='p-5' type='radio' name='group_1')
-                                                label(for='p-5').tab__item Финал
-                                    select.selectbox.js-choice
-                                        option Предварительный раунд
-                                        option 1/4
-                                        option Полуфинал
-                                        option Матч за 3-е место
-                                        option Финал
+                                .b-season-detail__main
+                                    h2 Расписание матчей
+                                    .b-season-detail__control
+                                        .tab.tab--radio
+                                            .tab__scroll
+                                                .tab__wrap
+                                                    input(id='p-1' type='radio' name='group_1' checked)
+                                                    label(for='p-1').tab__item Предварительный раунд
+                                                    input(id='p-2' type='radio' name='group_1')
+                                                    label(for='p-2').tab__item 1/4
+                                                    input(id='p-3' type='radio' name='group_1')
+                                                    label(for='p-3').tab__item Полуфинал
+                                                    input(id='p-4' type='radio' name='group_1')
+                                                    label(for='p-4').tab__item Матч за 3-е место
+                                                    input(id='p-5' type='radio' name='group_1')
+                                                    label(for='p-5').tab__item Финал
+                                        select.selectbox.js-choice
+                                            option Предварительный раунд
+                                            option 1/4
+                                            option Полуфинал
+                                            option Матч за 3-е место
+                                            option Финал
 
-                                .b-season-detail__list-tables.js-tab
-                                    .tab.tab--line.js-tab-item
-                                        .tab__item.tab__item--active Ближайшие матчи
-                                        .tab__item Все матчи
-                                    .b-season-detail__content-tables
-                                        .b-season-detail__content-wrap.custom-scrollbar.js-tab-contents.js-scrollbar
-                                            .b-season-detail__tables.js-tab-content.active
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item.js-statistic-popup-btn
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                    .b-season-detail__list-tables
+                                        .b-season-detail__content-tables
+                                            .b-season-detail__content-wrap.custom-scrollbar.js-scrollbar
+                                                .b-season-detail__tables
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item.js-statistic-popup
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                            .b-season-detail__tables.js-tab-content
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                .b-season-detail__tables
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
 
-                                                .b-table
-                                                    .b-table__title-time 11 мая, пн
-                                                    .b-table__item
-                                                        div 21:10
-                                                        div
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_1-lg.png' alt='')
-                                                                | Балтика -
-                                                            p
-                                                                span
-                                                                    img(src='./images/teams/team_2-lg.png' alt='')
-                                                                | Красные Крылья
-                                                        div
-                                                            .b-table__item-icon.b-table__item-icon--video
-                                                            .b-table__item-icon.b-table__item-icon--docs
-                                                        div 5 : 0
-                                                        div Завершен
+                                                    .b-table
+                                                        .b-table__title-time 11 мая, пн
+                                                        .b-table__item
+                                                            div 21:10
+                                                            div
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_1-lg.png' alt='')
+                                                                    | Балтика -
+                                                                p
+                                                                    span
+                                                                        img(src='./images/teams/team_2-lg.png' alt='')
+                                                                    | Красные Крылья
+                                                            div
+                                                                .b-table__item-icon.b-table__item-icon--video
+                                                                .b-table__item-icon.b-table__item-icon--docs
+                                                            div 5 : 0
+                                                            div Завершен
+
+
+
 
 
 
 
     .b-popup.b-popup--calendar
         .b-popup__close.js-close-popup
-        .b-calendar.js-tab
+        .b-calendar.js-tabs-container
             .b-calendar__title Календарь матчей
             .b-calendar__control
                 .b-calendar__selectbox
@@ -481,8 +483,8 @@ block content
                 .b-calendar__current-title-date Январь, 2020
                 .b-calendar__current-title-date.b-calendar__current-title-date--mobile 01 - 07 Январь, 2020
                 .b-calendar__tabs
-                    .tab.js-tab-item
-                        .tab__item.tab__item--active Месяц
+                    .tab.js-tabs-items
+                        .tab__item.is-active Месяц
                         .tab__item Неделя
                 .b-calendar__arrows
                     .b-calendar__arrows-item.b-calendar__arrows-item--prev
@@ -497,178 +499,327 @@ block content
                         .b-calendar__day-name пятница
                         .b-calendar__day-name суббота
                         .b-calendar__day-name восскресенье
-                    .b-calendar__table.js-tab-contents
+                    .b-calendar__table
                         .b-calendar__strips
                             .b-calendar__strip
                             .b-calendar__strip
                             .b-calendar__strip
                             .b-calendar__strip
+                        .b-calendar__table-wrap.js-tabs-contents
+                            .b-calendar__cells.is-active
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 01
+                                    .b-calendar__cell-inner
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 02
+                                    .b-calendar__cell-inner
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                        .b-calendar__cell-show.b-calendar__cell-show--dis Показать еще
 
-                        .b-calendar__cells.js-tab-content.active
-                            .b-calendar__cell
-                                .b-calendar__cell-number 01
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
-                            .b-calendar__cell
-                                .b-calendar__cell-number 02
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                    .b-calendar__cell-show.b-calendar__cell-show--dis Показать еще
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 03
+                                    .b-calendar__cell-inner
+                                        .games
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                        .b-calendar__cell-show.js-show-more-games Показать еще
 
-                            .b-calendar__cell
-                                .b-calendar__cell-number 03
-                                .b-calendar__cell-inner
-                                    .games
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                    .b-calendar__cell-show.js-show-more-games Показать еще
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 04
+                                    .b-calendar__cell-inner
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                .b-calendar__cell.b-calendar__cell--current
+                                    .b-calendar__cell-number 05
+                                    .b-calendar__cell-inner
+                                        .games
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                        .b-calendar__cell-show Показать еще
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 06
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 07
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 08
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 09
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 10
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 11
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 12
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 13
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 14
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 15
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 16
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 17
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 18
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 19
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 20
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 21
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 22
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 23
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 24
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 25
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 26
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 27
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 28
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 29
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 30
+                                .b-calendar__cell
+                                    .b-calendar__cell-number 31
+                                .b-calendar__cell
+                                    .b-calendar__cell-number -
+                                .b-calendar__cell
+                                    .b-calendar__cell-number -
+                                .b-calendar__cell
+                                    .b-calendar__cell-number -
+                                .b-calendar__cell
+                                    .b-calendar__cell-number -
 
-                            .b-calendar__cell
-                                .b-calendar__cell-number 04
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                            .b-calendar__cell.b-calendar__cell--current
-                                .b-calendar__cell-number 05
-                                .b-calendar__cell-inner
-                                    .games
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                    .b-calendar__cell-show Показать еще
-                            .b-calendar__cell
-                                .b-calendar__cell-number 06
-                            .b-calendar__cell
-                                .b-calendar__cell-number 07
-                            .b-calendar__cell
-                                .b-calendar__cell-number 08
-                            .b-calendar__cell
-                                .b-calendar__cell-number 09
-                            .b-calendar__cell
-                                .b-calendar__cell-number 10
-                            .b-calendar__cell
-                                .b-calendar__cell-number 11
-                            .b-calendar__cell
-                                .b-calendar__cell-number 12
-                            .b-calendar__cell
-                                .b-calendar__cell-number 13
-                            .b-calendar__cell
-                                .b-calendar__cell-number 14
-                            .b-calendar__cell
-                                .b-calendar__cell-number 15
-                            .b-calendar__cell
-                                .b-calendar__cell-number 16
-                            .b-calendar__cell
-                                .b-calendar__cell-number 17
-                            .b-calendar__cell
-                                .b-calendar__cell-number 18
-                            .b-calendar__cell
-                                .b-calendar__cell-number 19
-                            .b-calendar__cell
-                                .b-calendar__cell-number 20
-                            .b-calendar__cell
-                                .b-calendar__cell-number 21
-                            .b-calendar__cell
-                                .b-calendar__cell-number 22
-                            .b-calendar__cell
-                                .b-calendar__cell-number 23
-                            .b-calendar__cell
-                                .b-calendar__cell-number 24
-                            .b-calendar__cell
-                                .b-calendar__cell-number 25
-                            .b-calendar__cell
-                                .b-calendar__cell-number 26
-                            .b-calendar__cell
-                                .b-calendar__cell-number 27
-                            .b-calendar__cell
-                                .b-calendar__cell-number 28
-                            .b-calendar__cell
-                                .b-calendar__cell-number 29
-                            .b-calendar__cell
-                                .b-calendar__cell-number 30
-                            .b-calendar__cell
-                                .b-calendar__cell-number 31
-                            .b-calendar__cell
-                                .b-calendar__cell-number -
-                            .b-calendar__cell
-                                .b-calendar__cell-number -
-                            .b-calendar__cell
-                                .b-calendar__cell-number -
-                            .b-calendar__cell
-                                .b-calendar__cell-number -
+                            .b-calendar__columns
+                                .b-calendar__column
+                                    .b-calendar__cell-number 01
+                                    .b-calendar__cell-day понедельник
+                                    .b-calendar__cell-scroll
+                                        .b-calendar__cell-inner
+                                            .games.games--payload
+                                                .games__text 2 сен, пн
+                                                .games__teams
+                                                    .games__teams-item
+                                                        .games__img-box
+                                                            img(src='./images/teams/team_1-sm.png' alt='')
+                                                        span Балтика
+                                                    span  -
+                                                        = ' '
+                                                    .games__teams-item
+                                                        .games__img-box
+                                                            img(src='./images/teams/team_2-sm.png' alt='')
+                                                        span Красные Крылья
+                                                .games__text 21:20 (Группа А)
+                                                .games__payload
+                                                    .games__account 2:1
+                                                    .games__ico.games__ico--video
+                                                    .games__ico.games__ico--docs
 
-                        .b-calendar__columns.js-tab-content
-                            .b-calendar__column
-                                .b-calendar__cell-number 01
-                                .b-calendar__cell-day понедельник
-                                .b-calendar__cell-scroll
+
+
+
+                                            .games.games--payload
+                                                .games__text 2 сен, пн
+                                                .games__teams
+                                                    .games__teams-item
+                                                        .games__img-box
+                                                            img(src='./images/teams/team_1-sm.png' alt='')
+                                                        span Балтика
+                                                    span  -
+                                                        = ' '
+                                                    .games__teams-item
+                                                        .games__img-box
+                                                            img(src='./images/teams/team_2-sm.png' alt='')
+                                                        span Красные Крылья
+                                                .games__text 21:20 (Группа А)
+                                                .games__payload
+                                                    .games__account 2:1
+                                            .games
+                                                .games__text 2 сен, пн
+                                                .games__teams
+                                                    .games__teams-item
+                                                        .games__img-box
+                                                            img(src='./images/teams/team_1-sm.png' alt='')
+                                                        span Балтика
+                                                    span  -
+                                                        = ' '
+                                                    .games__teams-item
+                                                        .games__img-box
+                                                            img(src='./images/teams/team_2-sm.png' alt='')
+                                                        span Красные Крылья
+                                                .games__text 21:20 (Группа А)
+                                            .games.games--default
+                                                span Показать
+                                                    br
+                                                    | еще
+
+                                .b-calendar__column
+                                    .b-calendar__cell-number 02
+                                    .b-calendar__cell-day вторник
+                                    .b-calendar__cell-inner
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
+
+
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
+
+
+                                .b-calendar__column.b-calendar__column--current
+                                    .b-calendar__cell-number 03
+                                    .b-calendar__cell-day среда
+                                    .b-calendar__cell-inner
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
+
+
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
+
+
+                                .b-calendar__column
+                                    .b-calendar__cell-number 04
+                                    .b-calendar__cell-day четверг
                                     .b-calendar__cell-inner
                                         .games.games--payload
                                             .games__text 2 сен, пн
@@ -692,6 +843,10 @@ block content
 
 
 
+                                .b-calendar__column
+                                    .b-calendar__cell-number 05
+                                    .b-calendar__cell-day пятница
+                                    .b-calendar__cell-inner
                                         .games.games--payload
                                             .games__text 2 сен, пн
                                             .games__teams
@@ -708,7 +863,11 @@ block content
                                             .games__text 21:20 (Группа А)
                                             .games__payload
                                                 .games__account 2:1
-                                        .games
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
+
+
+                                        .games.games--payload
                                             .games__text 2 сен, пн
                                             .games__teams
                                                 .games__teams-item
@@ -722,235 +881,79 @@ block content
                                                         img(src='./images/teams/team_2-sm.png' alt='')
                                                     span Красные Крылья
                                             .games__text 21:20 (Группа А)
-                                        .games.games--default
-                                            span Показать
-                                                br
-                                                | еще
-
-                            .b-calendar__column
-                                .b-calendar__cell-number 02
-                                .b-calendar__cell-day вторник
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
 
 
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
+                                .b-calendar__column
+                                    .b-calendar__cell-number 06
+                                    .b-calendar__cell-day суббота
+                                    .b-calendar__cell-inner
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
 
 
-                            .b-calendar__column.b-calendar__column--current
-                                .b-calendar__cell-number 03
-                                .b-calendar__cell-day среда
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
 
 
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
+                                .b-calendar__column
+                                    .b-calendar__cell-number 07
+                                    .b-calendar__cell-day восскресенье
+                                    .b-calendar__cell-inner
+                                        .games.games--payload
+                                            .games__text 2 сен, пн
+                                            .games__teams
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_1-sm.png' alt='')
+                                                    span Балтика
+                                                span  -
+                                                    = ' '
+                                                .games__teams-item
+                                                    .games__img-box
+                                                        img(src='./images/teams/team_2-sm.png' alt='')
+                                                    span Красные Крылья
+                                            .games__text 21:20 (Группа А)
+                                            .games__payload
+                                                .games__account 2:1
+                                                .games__ico.games__ico--video
+                                                .games__ico.games__ico--docs
 
-
-                            .b-calendar__column
-                                .b-calendar__cell-number 04
-                                .b-calendar__cell-day четверг
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
-
-
-
-
-                            .b-calendar__column
-                                .b-calendar__cell-number 05
-                                .b-calendar__cell-day пятница
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
-
-
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
-
-
-                            .b-calendar__column
-                                .b-calendar__cell-number 06
-                                .b-calendar__cell-day суббота
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
-
-
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
-
-
-                            .b-calendar__column
-                                .b-calendar__cell-number 07
-                                .b-calendar__cell-day восскресенье
-                                .b-calendar__cell-inner
-                                    .games.games--payload
-                                        .games__text 2 сен, пн
-                                        .games__teams
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_1-sm.png' alt='')
-                                                span Балтика
-                                            span  -
-                                                = ' '
-                                            .games__teams-item
-                                                .games__img-box
-                                                    img(src='./images/teams/team_2-sm.png' alt='')
-                                                span Красные Крылья
-                                        .games__text 21:20 (Группа А)
-                                        .games__payload
-                                            .games__account 2:1
-                                            .games__ico.games__ico--video
-                                            .games__ico.games__ico--docs
 
 
 
@@ -1133,6 +1136,7 @@ block content
                             .games__text 21:20 (Группа А)
 
 
+
     .b-popup.b-popup--statistic-game
         .b-popup__close.js-close-popup
         .b-statistic-game
@@ -1215,15 +1219,16 @@ block content
 
     .b-popup.b-popup--teams
         .b-popup__close.js-close-popup
-        .b-teams.js-tab
+        .b-teams.js-tabs-container
             .b-teams__title Бочкари
             .b-teams__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
             .b-teams__tabs
-                .tab.js-tab-item
-                    .tab__item.tab__item--active Состав
-                    .tab__item Матчи
-            .b-teams__container.js-tab-content
-                .b-teams__list.active
+                .tab
+                    .tab__wrap.js-tabs-items
+                        .tab__item.is-active Состав
+                        .tab__item Матчи
+            .b-teams__container.js-tabs-contents
+                .b-teams__list.is-active
                     .b-teams__players
                         .b-teams__player-type Вратари
                         .b-teams__player-table
@@ -1239,6 +1244,7 @@ block content
                                         img(src='./images/coach@2x.jpg' alt='')
                                         | Симоненко Максим
                                     div 12.12.1987
+                                        span (№99)
                                     div
                                         .b-teams__player-more.js-show-player Подробнее
                                         .b-teams__player-box
@@ -1270,6 +1276,7 @@ block content
                                         img(src='./images/coach@2x.jpg' alt='')
                                         | Симоненко Максим
                                     div 12.12.1987
+                                        span (№99)
                                     div
                                         .b-teams__player-more.js-show-player Подробнее
                                         .b-teams__player-box

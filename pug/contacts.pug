@@ -3,7 +3,7 @@ extends _layout-black-header
 block title
     title Контакты
 block content
-    .news-page
+    .common-page
         .container
             .b-breadcrumbs
                 .b-breadcrumbs__item
@@ -14,39 +14,40 @@ block content
             .row
                 main.col-lg-12.col-md-12.col-sm-12.col-xs-12
                     .b-main-box
-                        .b-contacts
-                            .b-contacts__map
-                                #map
+                        .b-main-box__wrapper
+                            .b-contacts
+                                .b-contacts__map
+                                    #map
 
-                            .b-contacts__desc
-                                h2 ДЮШ №7, Скиф, по хоккею
-                                .b-contacts__info
-                                    .b-contacts__item
-                                        span Адрес
-                                        p г. Барнаул, ул. Юрина, 287а
-                                    .b-contacts__item
-                                        span Телефон
-                                        a(href='tel:73852439252') +7 (3852) 43-92-52
-                                    .b-contacts__item
-                                        span E-mail
-                                        a(href='mailto:andrewbille@gmail.com') andrewbille@gmail.com
-
-                                .b-contacts__worker
-                                    .player
-                                        .player__avatar
-                                            img(src='./images/coach@2x.jpg' alt='')
-                                        .player__name
-                                            p Миневич Леонид Леонидович
-                                            span Тренер
-                                    .player
-                                        .player__avatar
-                                            img(src='./images/moderator@2x.jpg' alt='')
-                                        .player__name
-                                            p Билле Андрей
-                                            span Модератор сайта
-                                        .player__phone
+                                .b-contacts__desc
+                                    h2 ДЮШ №7, Скиф, по хоккею
+                                    .b-contacts__info
+                                        .b-contacts__item
+                                            span Адрес
+                                            p г. Барнаул, ул. Юрина, 287а
+                                        .b-contacts__item
                                             span Телефон
-                                            a(href='tel:89039587581') 8 (903) 958-75-81
+                                            a(href='tel:73852439252') +7 (3852) 43-92-52
+                                        .b-contacts__item
+                                            span E-mail
+                                            a(href='mailto:andrewbille@gmail.com') andrewbille@gmail.com
+
+                                    .b-contacts__worker
+                                        .player
+                                            .player__avatar
+                                                img(src='./images/coach@2x.jpg' alt='')
+                                            .player__name
+                                                p Миневич Леонид Леонидович
+                                                span Тренер
+                                        .player
+                                            .player__avatar
+                                                img(src='./images/moderator@2x.jpg' alt='')
+                                            .player__name
+                                                p Билле Андрей
+                                                span Модератор сайта
+                                            .player__phone
+                                                span Телефон
+                                                a(href='tel:89039587581') 8 (903) 958-75-81
 
 
 

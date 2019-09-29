@@ -141,6 +141,10 @@
   position: relative;
 }
 
+.b-calendar__table-wrap {
+
+}
+
 .b-calendar__days-names {
   display: flex;
   align-items: center;
@@ -165,9 +169,7 @@
   display: none;
   flex-wrap: wrap;
 
-
-
-  &.active {
+  &.is-active {
     display: flex;
 
     @include bp($bp-1240) {
@@ -367,7 +369,7 @@
     margin-left: -20px;
   }
 
-  &.active {
+  &.is-active {
     display: flex;
   }
 }

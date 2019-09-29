@@ -5,6 +5,10 @@
     border-collapse: collapse;
     border-spacing: 0;
 
+    @include bp($bp-720) {
+      display: none;
+    }
+
     th {
       span {
         position: relative;
@@ -146,6 +150,21 @@
   }
 }
 
+.b-table__thead {
+  display: none;
+  @include bp($bp-720) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+}
+
+.b-table__th {
+  font-size: 14px;
+  font-weight: 500;
+  color: $cornflower-blue;
+}
+
 .b-table__title-time {
   font-size: 14px;
   font-weight: 500;
@@ -161,6 +180,7 @@
 .b-table__item {
   border-top: 1px solid $very-light-blue;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   transition: .3s ease-in-out all;
@@ -196,6 +216,7 @@
       padding: 0;
       flex-basis: auto;
       line-height: 1;
+      flex-grow: 0;
     }
 
     @include bp($bp-480) {
@@ -304,4 +325,34 @@
 
 .b-table__label--soon {
   background-color: $butterscotch;
+}
+
+.b-table--card {
+  .b-table__title-time {
+    @include bp($bp-720) {
+      margin-bottom: 18px;
+    }
+  }
+  .b-table__item {
+    display: none;
+
+    @include bp($bp-720) {
+      padding-top: 10px;
+      display: flex;
+
+      & > div {
+        &:nth-child(1) {
+          width: 25px;
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+
+        &:nth-child(2) {
+          width: calc(100% - 25px);
+          padding-left: 10px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
 }

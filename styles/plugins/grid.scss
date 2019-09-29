@@ -38,6 +38,15 @@
   flex-wrap: wrap;
   margin-right: var(--gutter-compensation, -0.5rem);
   margin-left: var(--gutter-compensation, -0.5rem);
+
+  @include bp($bp-640) {
+    margin-left: 0;
+    margin-right: 0;
+
+    .col-xs-12 {
+      padding: 0;
+    }
+  }
 }
 
 .row.reverse {
