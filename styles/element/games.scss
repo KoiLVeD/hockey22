@@ -1,9 +1,12 @@
 .games {
   width: 200px;
   display: block;
+}
+
+.games__wrap {
+  padding: 19px 10px;
   border-radius: 15px;
   background-color: $white;
-  padding: 19px 10px;
 }
 
 .games__text {
@@ -68,12 +71,17 @@
 
 .games--default {
   width: 103px;
-  border: dashed 2px $white;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
+
+  .games__wrap {
+    border: dashed 2px $white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
   span {
     display: block;
     font-size: 12px;

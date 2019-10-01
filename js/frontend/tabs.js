@@ -26,7 +26,7 @@ $(document).ready(function () {
   let linkTab = $('.js-tabs-items').children();
   let elClosest = '.js-tabs-container';
 
-  linkTab.on('click', function (e) {
+  $(document).on('click', '.js-tabs-items > *', function (e) {
     let $this = $(this);
     let tabActive = $this.closest(elClosest).find('.js-tabs-items');
     let contentTab = $this.closest(elClosest).find('.js-tabs-contents').children();

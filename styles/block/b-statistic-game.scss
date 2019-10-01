@@ -182,3 +182,92 @@
     margin-left: auto;
   }
 }
+
+//
+//
+//
+
+.b-statistic-player {
+  .b-teams__player-box {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+  }
+
+  .b-teams__player-avatar {
+    margin-bottom: 20px;
+  }
+
+  .b-teams__player-name {
+    font-size: 18px;
+  }
+  .b-teams__player-info {
+    font-size: 14px;
+    margin-bottom: 36px;
+
+    @include bp($bp-640) {
+      margin-bottom: 29px;
+    }
+  }
+
+  .b-teams__player-title {
+    font-size: 16px;
+    color: $cornflower-blue;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .b-teams__player-list-item {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 16px;
+
+    @include bp($bp-640) {
+      flex-wrap: wrap;
+      padding-right: 0;
+    }
+
+    &:not(:first-child) {
+      border-top: 1px solid $very-light-blue;
+    }
+  }
+  .b-teams__player-list-name {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.43;
+    max-width: 368px;
+
+    @include bp($bp-640) {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .b-teams__player-list-stat {
+    display: flex;
+    justify-content: space-between;
+    width: 168px;
+
+    @include bp($bp-640) {
+      width: 100%;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 300;
+      b {
+        font-weight: 500;
+        margin-right: 5px;
+      }
+    }
+  }
+}

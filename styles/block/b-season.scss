@@ -222,16 +222,16 @@
 
 .b-season-detail__btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 40px;
+
+  .btn--blue {
+    margin-left: 20px;
+  }
 
   @include bp($bp-ipad-1024) {
     justify-content: flex-start;
     margin-bottom: 30px;
-
-    .btn--blue {
-      margin-left: 20px;
-    }
   }
 
   @include bp($bp-480) {
@@ -333,8 +333,6 @@
   margin-bottom: 30px;
 
   @include bp($bp-min-767) {
-    margin-bottom: 20px;
-
     .selectbox {
       display: none;
     }
@@ -359,7 +357,7 @@
 }
 
 .b-season-detail__list-tables {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 
   .tab {
     border-bottom: 1px solid $very-light-blue;
@@ -369,18 +367,6 @@
 
 .b-season-detail__content-tables {
   position: relative;
-
-  //&:before {
-  //  content: '';
-  //  position: absolute;
-  //  left: 0;
-  //  top: 0;
-  //  display: block;
-  //  width: 100%;
-  //  height: 46px;
-  //  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), $white);
-  //  z-index: 20;
-  //}
 
   &:after {
     content: '';
@@ -392,6 +378,12 @@
     height: 46px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $white);
   }
+
+  .custom-scrollbar .simplebar-track {
+    @include bp($bp-720) {
+      right: -6px;
+    }
+  }
 }
 
 .b-season-detail__content-wrap {
@@ -399,10 +391,11 @@
 }
 
 .b-season-detail__tables {
-  display: none;
+  width: calc(100% - 6px);
 
-  &.active {
-    display: block;
+  @include bp($bp-720) {
+    width: 100%;
+    padding-right: 10px;
   }
 
   .b-table {
@@ -417,9 +410,35 @@
 
   .b-table__item {
     border-top: none;
-    border-bottom: 1px solid #e2e9f7;;
+    border-bottom: 1px solid #e2e9f7;
+
     &:last-child {
       border-bottom: none;
+    }
+
+    & > div {
+      &:nth-child(2) {
+        min-width: 272px;
+      }
+    }
+  }
+}
+
+.b-season-detail__sort-table {
+  .b-table {
+
+    &:not(:first-child) {
+      margin-top: 19px;
+    }
+    th {
+      &:nth-child(2) {
+        width: 215px;
+      }
+    }
+    td {
+      &:nth-child(2) {
+        width: 215px;
+      }
     }
   }
 }

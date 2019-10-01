@@ -8,33 +8,57 @@ document.addEventListener('DOMContentLoaded', function() {
     headerBlock.classList.toggle('active')
   });
 
+  /* ----------------------------------------------------------- */
+  /* Скроллбар */
+  /* ----------------------------------------------------------- */
   let scrollbar = document.querySelector('.js-scrollbar');
-
+  let data = new Date();
+  let year = data.getFullYear();
+  let month = data.getMonth();
+  let day = data.getDate();
+  let aTag = $(`#${day}-${month}-${year}`);
   if (scrollbar) {
     const simpleBar = new SimpleBar(scrollbar);
+    if (aTag.length) {
+      let scrollEl = simpleBar.getScrollElement()
+      $(scrollEl).animate({scrollTop: aTag.position().top}, 'slow');
+    }
   }
 
   /* ----------------------------------------------------------- */
   /* Всплывающие окно играка в попапе */
   /* ----------------------------------------------------------- */
-  let btnShowPlayers = document.querySelectorAll('.js-show-player');
-  let btnClosePlayers = document.querySelectorAll('.js-close-player');
-  let teamBoxes = document.querySelectorAll('.b-teams__player-box');
+  let btnShowPlayers = '.js-show-player';
+  let btnClosePlayers = '.js-close-player';
 
-  [...btnShowPlayers].forEach((button) => {
-    button.addEventListener('click', () => {
+  document.addEventListener('click', function (event) {
+    const target = event.target
+    if (target.matches(btnShowPlayers)) {
+      let teamBoxes = document.querySelectorAll('.b-teams__player-box');
       [...teamBoxes].forEach((box) => {
         box.classList.remove('b-teams__player-box--show')
       });
-      button.nextElementSibling.classList.add('b-teams__player-box--show')
-    });
-  });
+      target.nextElementSibling.classList.add('b-teams__player-box--show')
+    }
+    if (target.matches(btnClosePlayers)) {
+      target.parentNode.classList.remove('b-teams__player-box--show')
+    }
+  })
 
-  [...btnClosePlayers].forEach((button) => {
-    button.addEventListener('click', () => {
-      button.parentNode.classList.remove('b-teams__player-box--show')
-    });
-  });
+  // [...btnShowPlayers].forEach((button) => {
+  //   button.addEventListener('click', () => {
+  //     [...teamBoxes].forEach((box) => {
+  //       box.classList.remove('b-teams__player-box--show')
+  //     });
+  //     button.nextElementSibling.classList.add('b-teams__player-box--show')
+  //   });
+  // });
+  //
+  // [...btnClosePlayers].forEach((button) => {
+  //   button.addEventListener('click', () => {
+  //     button.parentNode.classList.remove('b-teams__player-box--show')
+  //   });
+  // });
 
   function clickOutside(e) {
     if (e.target.classList.contains('js-show-player')) {

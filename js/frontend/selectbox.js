@@ -17,17 +17,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  choices.passedElement.element.addEventListener('choice', function(value, keyCode) {
-    // do something creative here...
-    const isTabVersion = this.classList.contains('js-choice-version-tab');
-    if (isTabVersion) {
-      const currentId = value.detail.choice.id
-      let tabsContent = document.querySelector('.js-tabs-contents').children;
-      [...tabsContent].forEach((content) => {
-        content.classList.remove('is-active')
-      });
-      tabsContent[currentId - 1].classList.add('is-active')
-    }
-  }, false);
+  let isTab = document.querySelector('.js-choice-version-tab');
+
+  if (isTab) {
+    choices.passedElement.element.addEventListener('choice', function(value, keyCode) {
+      // do something creative here...
+      const isTabVersion = this.classList.contains('js-choice-version-tab');
+      if (isTabVersion) {
+        const currentId = value.detail.choice.id
+        let tabsContent = document.querySelector('.js-tabs-contents').children;
+        [...tabsContent].forEach((content) => {
+          content.classList.remove('is-active')
+        });
+        tabsContent[currentId - 1].classList.add('is-active')
+      }
+    }, false);
+  }
 });
 
