@@ -26,6 +26,7 @@ body {
 }
 
 aside {
+  padding: 0;
   @include bp($bp-ipad-1024) {
     margin-top: 20px;
   }

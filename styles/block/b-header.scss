@@ -105,7 +105,7 @@
       transition: .3s ease-in-out all;
 
       &:hover {
-        color: $cornflower-blue!important;
+        color: $white!important;
         &:after {
           width: 100%;
           left: 0;
@@ -118,14 +118,14 @@
         transition: all 0.25s ease-in-out;
         height: 2px;
         opacity: 0.2;
-        background-color: $cornflower-blue!important;
+        background-color: $white!important;
         position: absolute;
         bottom: -5px;
         content: '';
       }
 
       &.active {
-        color: $cornflower-blue!important;
+        color: $white!important;
         &:after {
           width: 100%;
           left: 0;
@@ -261,7 +261,13 @@
     color: $black;
 
     &:after {
-      background-color: $black;
+      background-color: $cornflower-blue!important;
+    }
+    &:hover {
+      color: $cornflower-blue !important;
+    }
+    &.active {
+      color: $cornflower-blue !important;
     }
   }
 

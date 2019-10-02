@@ -5,3 +5,4 @@ import './sliders';
 import './map';
 import './popup';
 import './sort';
+import './parallax';

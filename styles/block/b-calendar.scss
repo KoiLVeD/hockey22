@@ -339,6 +339,8 @@
 }
 
 .b-calendar__cell-scroll {
+  position: relative;
+  z-index: 10;
   @include bp($bp-640) {
     overflow-x: auto;
     padding-left: 20px;
@@ -382,7 +384,7 @@
   position: relative;
   width: 14.28571%;
   height: 100%;
-  min-height: 750px;
+  min-height: 755px;
   padding: 10px;
 
   @include bp($bp-1240) {
@@ -455,12 +457,10 @@
 
   .games--default {
     width: 100%;
-    box-sizing: content-box;
-    padding-right: 20px;
 
     .games__wrap {
-      padding-top: 14px;
-      padding-bottom: 14px;
+      padding-top: 12px;
+      padding-bottom: 12px;
       border-color: $cornflower-blue;
       background-color: transparent;
       box-shadow: none;
@@ -541,6 +541,12 @@
   padding: 0 20px;
   transition: .3s ease-in-out all;
 
+  @include bp($bp-540) {
+    top: 54px;
+    bottom: auto;
+    height: auto;
+  }
+
   &.active {
     opacity: 1;
     visibility: visible;
@@ -553,6 +559,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+
+  @include bp($bp-540) {
+    margin-bottom: 10px;
+  }
 }
 
 .b-calendar__more-back {
@@ -566,6 +576,10 @@
     font-size: 14px;
     line-height: 1;
     color: $cornflower-blue;
+
+    @include bp($bp-414) {
+      display: none;
+    }
   }
 }
 
@@ -573,6 +587,10 @@
   font-size: 24px;
   font-weight: 300;
   line-height: 40px;
+
+  @include bp($bp-540) {
+    font-size: 18px;
+  }
 }
 
 .b-calendar__more-day {
@@ -581,6 +599,10 @@
   font-weight: 300;
   text-align: center;
   margin-bottom: 20px;
+
+  @include bp($bp-540) {
+    margin-bottom: 10px;
+  }
 }
 
 .b-calendar__more-list {

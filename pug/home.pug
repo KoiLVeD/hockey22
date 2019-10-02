@@ -5,35 +5,24 @@ block title
 block content
     .home-page
         .home-page__header
-            .home-page__fullpage
+            .home-page__fullpage.js-parallax
                 .home-page__bg
                 .home-page__ice
-                .home-page__player
-                .home-page__puck
+                .home-page__player.js-parallax-layer(data-parallax-deep="900")
+                .home-page__puck.js-parallax-layer(data-parallax-deep="30")
             .home-page__fullpage-bottom
                 .container
                     .home-page__block
                         h2 Ближайшие матчи
                         .home-page__games
-                            a(href='').games
-                                .games__text 2 сен, пн
-                                .games__teams
-                                    .games__teams-item
-                                        .games__img-box
-                                            img(src='./images/teams/team_1-sm.png' alt='')
-                                        span Балтика
-                                    span  -
-                                        = ' '
-                                    .games__teams-item
-                                        .games__img-box
-                                            img(src='./images/teams/team_2-sm.png' alt='')
-                                        span Красные Крылья
-                                .games__text 21:20 (Группа А)
-
+                            +game
+                            +game
+                            +game
                             a(href='').games.games--default
-                                span Больше
-                                    br
-                                    | матчей
+                                .games__wrap
+                                    span Больше
+                                        br
+                                        |  матчей
 
                     .home-page__block.home-page__block--slider
                         h2 Прошедшие матчи
@@ -42,33 +31,9 @@ block content
                                 .swiper-wrapper
                                     // Slides
                                     .swiper-slide
-                                        a(href='').games.games--short
-                                            .games__text 2 сен, пн
-                                            .games__teams
-                                                .games__teams-item
-                                                    .games__img-box
-                                                        img(src='./images/teams/team_1-sm.png' alt='')
-                                                    span Балтика
-                                                .games__teams-count 3:1
-                                                .games__teams-item
-                                                    .games__img-box
-                                                        img(src='./images/teams/team_2-sm.png' alt='')
-                                                    span Красные Крылья
-                                            .games__text 21:20 (Группа А)
+                                        +game-count
                                     .swiper-slide
-                                        a(href='').games.games--short
-                                            .games__text 2 сен, пн
-                                            .games__teams
-                                                .games__teams-item
-                                                    .games__img-box
-                                                        img(src='./images/teams/team_1-sm.png' alt='')
-                                                    span БАЛТ
-                                                .games__teams-count 0:1
-                                                .games__teams-item
-                                                    .games__img-box
-                                                        img(src='./images/teams/team_2-sm.png' alt='')
-                                                    span КРАС
-                                            .games__text 21:20 (Группа А)
+                                        +game-count
 
                                 .swiper-button-prev.custom-button-slider.custom-button-slider--prev.js-game-slider-prev
                                 .swiper-button-next.custom-button-slider.custom-button-slider--next.js-game-slider-next
@@ -796,7 +761,7 @@ block content
 
 
                     aside.col-lg-4.col-md-4.col-sm-12.col-xs-12
-                        .b-main-box.col-lg-12.col-sm-6.col-xs-12
+                        .b-main-box.col-lg-12.col-md-12.col-sm-6.col-xs-12
                             .b-main-box__wrapper
                                 h2 Лучшие снайперы
                                 .b-list-player.js-tabs-container
@@ -960,7 +925,7 @@ block content
                                 .b-main-box__btn
                                     a(href='').btn.btn--yellow Вся статистика
 
-                        .b-main-box.col-lg-12.col-sm-6.col-xs-12
+                        .b-main-box.col-lg-12.col-md-12.col-sm-6.col-xs-12
                             .b-main-box__wrapper
                                 h2 Лучшие бомбардиры
                                 .b-list-player.js-tabs-container
@@ -1123,7 +1088,7 @@ block content
                                 .b-main-box__btn
                                     a(href='').btn.btn--yellow Вся статистика
 
-                        .b-main-box.col-lg-12.col-sm-12.col-xs-12
+                        .b-main-box.col-lg-12.col-md-12.col-sm-12.col-xs-12
                             .b-main-box__wrapper
                                 h2 Фотоотчеты
                                 .b-gallery-aside
@@ -1159,7 +1124,7 @@ block content
                                 .b-main-box__btn
                                     a(href='').btn.btn--yellow Все альбомы
 
-                        .b-main-box.col-lg-12.col-sm-12.col-xs-12
+                        .b-main-box.col-lg-12.col-md-12.col-sm-12.col-xs-12
                             .b-main-box__wrapper
                                 h2 Объявления
                                 .b-main-box__desc 86 объявлений

@@ -69,8 +69,9 @@
   height: 682px;
   background-image: url("../images/fullpage/player.png");
   bottom: 0;
-  left: 59%;
-  transform: translate(-50%, 0);
+  left: 0;
+  right: -210px;
+  margin: auto;
 
   @include bp($bp-ipad-1024) {
     left: 72%;
@@ -87,9 +88,10 @@
 
 .home-page__puck {
   position: absolute;
-  top: 30%;
-  right: 15%;
-  transform: translate(-50%, -50%);
+  top: 22%;
+  right: -38%;
+  left: 0;
+  margin:  auto;
   width: 151px;
   height: 113px;
   background-image: url("../images/fullpage/puck.png");
@@ -176,6 +178,18 @@
 
       @include bp($bp-414) {
         margin-left: 10px;
+      }
+    }
+
+    &:nth-child(3) {
+      @include bp($bp-1240) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      @include bp($bp-ipad-768) {
+        display: none;
       }
     }
   }

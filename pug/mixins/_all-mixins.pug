@@ -25,11 +25,11 @@ mixin b-table-item--season()
     .b-table__item
         div 21:10
         div
-            p
+            p.js-teams-popup
                 span
                     img(src='./images/teams/team_1-lg.png' alt='')
                 | Балтика -
-            p
+            p.js-teams-popup
                 span
                     img(src='./images/teams/team_2-lg.png' alt='')
                 | Красные Крылья
@@ -38,20 +38,20 @@ mixin b-table-item--season()
                 a(href='').b-table__item-icon.b-table__item-icon--video
                 a(href='').b-table__item-icon.b-table__item-icon--docs
 
-        div 5 : 0
+        div.js-statistic-popup 5 : 0
         div Завершен
 mixin game-payload(isCount, isVideo, isDocs)
     .games.games--payload
         .games__wrap
             .games__text 2 сен, пн
             .games__teams
-                .games__teams-item
+                .games__teams-item.js-teams-popup
                     .games__img-box
                         img(src='./images/teams/team_1-sm.png' alt='')
                     span Балтика
                 span  -
                     = ' '
-                .games__teams-item
+                .games__teams-item.js-teams-popup
                     .games__img-box
                         img(src='./images/teams/team_2-sm.png' alt='')
                     span Красные Крылья
@@ -63,18 +63,35 @@ mixin game-payload(isCount, isVideo, isDocs)
                     .games__ico.games__ico--video
                 -if(isDocs)
                     .games__ico.games__ico--docs
+
+mixin game-count()
+    .games.games--short
+        .games__wrap
+            .games__text 2 сен, пн
+            .games__teams
+                .games__teams-item.js-teams-popup
+                    .games__img-box
+                        img(src='./images/teams/team_1-sm.png' alt='')
+                    span БАЛТ
+                .games__teams-count 3:1
+                .games__teams-item.js-teams-popup
+                    .games__img-box
+                        img(src='./images/teams/team_2-sm.png' alt='')
+                    span КРАС
+            .games__text 21:20 (Группа А)
+
 mixin game()
     .games
         .games__wrap
             .games__text 2 сен, пн
             .games__teams
-                .games__teams-item
+                .games__teams-item.js-teams-popup
                     .games__img-box
                         img(src='./images/teams/team_1-sm.png' alt='')
                     span Балтика
                 span  -
                     = ' '
-                .games__teams-item
+                .games__teams-item.js-teams-popup
                     .games__img-box
                         img(src='./images/teams/team_2-sm.png' alt='')
                     span Красные Крылья

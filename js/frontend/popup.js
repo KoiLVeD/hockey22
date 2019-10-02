@@ -41,8 +41,8 @@ let calendarBtn = document.querySelector('.js-calendar-popup');
 if (calendarBtn) {
   calendarBtn.addEventListener('click', function(){
     modalCalendar.open();
-    modalCalendar.setContent(document.querySelector('.b-popup--calendar').innerHTML);
   });
+  modalCalendar.setContent(document.querySelector('.b-popup--calendar').innerHTML);
 }
 
 // if (closeMoreBtn) {
