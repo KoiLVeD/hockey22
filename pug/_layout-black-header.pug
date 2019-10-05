@@ -17,9 +17,486 @@ html(lang='ru')
         block content
         include blocks/_b-footer
 
-        // 1h-30
-        // 12. 3h
-        // 13. 19-00
+        // Календарь
+        .b-popup.b-popup--calendar
+            .b-popup__close.js-close-calendar
+            .b-calendar.js-tabs-container
+                .b-calendar__title Календарь матчей
+                .b-calendar__control
+                    .b-calendar__selectbox
+                        select.selectbox.js-choice
+                            option Выбрать турнир
+                            option 2017 - 2019
+                            option 2018 - 2019
+                    .b-calendar__current-title-date Январь, 2020
+                    .b-calendar__current-title-date.b-calendar__current-title-date--mobile 01 - 07 Январь, 2020
+                    .b-calendar__tabs
+                        .tab.js-tabs-items
+                            .tab__item.is-active Месяц
+                            .tab__item Неделя
+                    .b-calendar__arrows
+                        .b-calendar__arrows-item.b-calendar__arrows-item--prev
+                        .b-calendar__arrows-item.b-calendar__arrows-item--next
+                .b-calendar__container
+                    .b-calendar__month
+                        .b-calendar__days-names
+                            .b-calendar__day-name понедельник
+                            .b-calendar__day-name вторник
+                            .b-calendar__day-name среда
+                            .b-calendar__day-name четверг
+                            .b-calendar__day-name пятница
+                            .b-calendar__day-name суббота
+                            .b-calendar__day-name восскресенье
+                        .b-calendar__table
+                            .b-calendar__strips
+                                .b-calendar__strip
+                                .b-calendar__strip
+                                .b-calendar__strip
+                                .b-calendar__strip
+                            .b-calendar__table-wrap.js-tabs-contents
+                                .b-calendar__cells.is-active
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 01
+                                        .b-calendar__cell-inner
+                                            +game-payload(true, true, true)
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 02
+                                        .b-calendar__cell-inner
+                                            +game-payload(true)
+                                            .b-calendar__cell-show.b-calendar__cell-show--dis Показать еще
+
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 03
+                                        .b-calendar__cell-inner
+                                            +game-payload(true, true)
+
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 04
+                                        .b-calendar__cell-inner
+                                            +game
+                                            .b-calendar__cell-show.js-show-more-games Показать еще
+
+                                    .b-calendar__cell.b-calendar__cell--current
+                                        .b-calendar__cell-number 05
+                                        .b-calendar__cell-inner
+                                            +game
+                                            .b-calendar__cell-show.js-show-more-games Показать еще
+
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 06
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 07
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 08
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 09
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 10
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 11
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 12
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 13
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 14
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 15
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 16
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 17
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 18
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 19
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 20
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 21
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 22
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 23
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 24
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 25
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 26
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 27
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 28
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 29
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 30
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number 31
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number -
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number -
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number -
+                                    .b-calendar__cell
+                                        .b-calendar__cell-number -
+
+                                .b-calendar__columns
+                                    .b-calendar__column
+                                        .b-calendar__cell-number 01
+                                        .b-calendar__cell-day понедельник
+                                        +calendar-column-item(true)
+                                    .b-calendar__column
+                                        .b-calendar__cell-number 02
+                                        .b-calendar__cell-day вторник
+                                        +calendar-column-item
+                                    .b-calendar__column.b-calendar__column--current
+                                        .b-calendar__cell-number 03
+                                        .b-calendar__cell-day среда
+                                        +calendar-column-item
+                                    .b-calendar__column
+                                        .b-calendar__cell-number 04
+                                        .b-calendar__cell-day четверг
+
+                                    .b-calendar__column
+                                        .b-calendar__cell-number 05
+                                        .b-calendar__cell-day пятница
+
+                                    .b-calendar__column
+                                        .b-calendar__cell-number 06
+                                        .b-calendar__cell-day суббота
+
+                                    .b-calendar__column
+                                        .b-calendar__cell-number 07
+                                        .b-calendar__cell-day восскресенье
+                                        +calendar-column-item
+                .b-calendar__more-games
+                    .b-calendar__more-header
+                        .b-calendar__more-back.js-close-more-games
+                            .b-calendar__arrows-item.b-calendar__arrows-item--prev
+                            span назад
+                        .b-calendar__more-date 25 Январь, 2019
+                    .b-calendar__more-day четверг
+                    .b-calendar__more-list
+                        .b-calendar__cell-inner
+                            +game
+                            +game-payload(true)
+                            +game-payload(true, true)
+                            +game
+                            +game-payload(true)
+                            +game-payload(true, true)
+                            +game-payload(true, true, true)
+                            +game
+                            +game-payload(true)
+                            +game-payload(true, true)
+                            +game-payload(true, true, true)
+
+
+
+        // Статистика матча
+        .b-popup.b-popup--statistic-game
+            .b-popup__close.js-close-popup-sm
+            .b-statistic-game
+                .b-statistic-game__title
+                    p Балтика - Красные Крылья
+                    span Матч от 24 января 2019
+                .b-statistic-game__account
+                    .b-statistic-game__account-team
+                        img(src='./images/teams/team_1-lg.png' alt='')
+                    .b-statistic-game__account-number
+                        p 5:4
+                        span счет
+                    .b-statistic-game__account-team
+                        img(src='./images/teams/team_2-lg.png' alt='')
+                .b-statistic-game__periods
+                    .b-statistic-game__period
+                        .b-statistic-game__period-title 1-й период
+                        .b-statistic-game__period-events
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Передача)
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--goal
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Гол)
+                        .b-statistic-game__period-events.b-statistic-game__period-events--reverse
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Передача)
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--goal
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Гол)
+                    .b-statistic-game__period
+                        .b-statistic-game__period-title 2-й период
+                        .b-statistic-game__period-events
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Передача)
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--goal
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Гол)
+                        .b-statistic-game__period-events.b-statistic-game__period-events--reverse
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Передача)
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--goal
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Гол)
+                        .b-statistic-game__period-events
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Передача)
+                    .b-statistic-game__period
+                        .b-statistic-game__period-title 3-й период
+                        .b-statistic-game__period-events
+                            .b-statistic-game__period-event
+                                .b-statistic-game__period-time 21:10
+                                .b-statistic-game__period-icon.b-statistic-game__period-icon--pass
+                                .b-statistic-game__period-name Мюттюнен М.
+                                .b-statistic-game__period-type (Передача)
+
+
+
+        // Статистика игрока
+        .b-popup.b-popup--statistic-player
+            .b-popup__close.js-close-popup-sm
+            .b-statistic-player
+                .b-teams__player-box
+                    .b-teams__player-avatar
+                        img(src='./images/player@2x.jpg' alt='')
+                        span A
+                    .b-teams__player-name Симоненко Максим
+                    .b-teams__player-info г. Барнаул, 27 лет
+                    .b-teams__player-title Статистика
+                    .b-teams__player-list
+                        .b-teams__player-list-item
+                            .b-teams__player-list-name Первенство Ветеранов хоккейной лиги г. Барнаула 2013-2014 (команда СкиФ)
+                            .b-teams__player-list-stat
+                                p
+                                    b Г
+                                    | 15
+                                p
+                                    b П
+                                    | 7
+                                p
+                                    b О
+                                    | 22
+                        .b-teams__player-list-item
+                            .b-teams__player-list-name Первенство Ветеранов хоккейной лиги г. Барнаула 2013-2014 (команда СкиФ)
+                            .b-teams__player-list-stat
+                                p
+                                    b Г
+                                    | 15
+                                p
+                                    b П
+                                    | 7
+                                p
+                                    b О
+                                    | 22
+
+        // Команда
+        .b-popup.b-popup--teams
+            .b-popup__close.js-close-popup-lg
+            .b-teams.js-tabs-container
+                .b-teams__title Бочкари
+                .b-teams__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+                .b-teams__tabs
+                    .tab
+                        .tab__wrap.js-tabs-items
+                            .tab__item.is-active Состав
+                            .tab__item Матчи
+                .b-teams__container.js-tabs-contents
+                    .b-teams__list.is-active
+                        .b-teams__players
+                            .b-teams__player-type Вратари
+                            .b-teams__player-table
+                                .b-teams__player-header
+                                    div №
+                                    div Имя
+                                    div Дата рождения
+                                    div
+                                .b-teams__player-body
+                                    .b-teams__player-item
+                                        div 99
+                                        div
+                                            img(src='./images/coach@2x.jpg' alt='')
+                                            | Симоненко Максим
+                                        div 12.12.1987
+                                            span (№99)
+                                        div
+                                            .b-teams__player-more.js-show-player Подробнее
+                                            .b-teams__player-box
+                                                .b-teams__player-avatar
+                                                    img(src='./images/player@2x.jpg' alt='')
+                                                    span A
+                                                .b-teams__player-name Симоненко Максим
+                                                .b-teams__player-info г. Барнаул, 27 лет
+                                                .b-teams__player-text
+                                                    b Статистика
+                                                    span Сезон 2019-2020
+                                                .b-teams__player-data
+                                                    div
+                                                        b Г
+                                                        = ' '
+                                                        | 15
+                                                    div
+                                                        b П
+                                                        = ' '
+                                                        | 7
+                                                    div
+                                                        b О
+                                                        = ' '
+                                                        | 25
+                                                .b-teams__player-statistic.js-statistic-player-popup Полная статисткика
+                                                .b-teams__player-close.js-close-player
+                                    .b-teams__player-item
+                                        div 99
+                                        div
+                                            img(src='./images/coach@2x.jpg' alt='')
+                                            | Симоненко Максим
+                                        div 12.12.1987
+                                            span (№99)
+                                        div
+                                            .b-teams__player-more.js-show-player Подробнее
+                                            .b-teams__player-box
+                                                .b-teams__player-avatar
+                                                    img(src='./images/player@2x.jpg' alt='')
+                                                    span A
+                                                .b-teams__player-name Симоне Максим
+                                                .b-teams__player-info г. Барнаул, 28 лет
+                                                .b-teams__player-text
+                                                    b Статистика
+                                                    span Сезон 2019-2020
+                                                .b-teams__player-data
+                                                    div
+                                                        b Г
+                                                        = ' '
+                                                        | 20
+                                                    div
+                                                        b П
+                                                        = ' '
+                                                        | 72
+                                                    div
+                                                        b О
+                                                        = ' '
+                                                        | 02
+                                                .b-teams__player-statistic.js-statistic-player-popup Полная статисткика
+                                                .b-teams__player-close.js-close-player
+
+                        .b-teams__players
+                            .b-teams__player-type Защитники
+                            .b-teams__player-table
+                                .b-teams__player-header
+                                    div №
+                                    div Имя
+                                    div Дата рождения
+                                    div
+                                .b-teams__player-body
+                                    .b-teams__player-item
+                                        div 99
+                                        div
+                                            img(src='./images/coach@2x.jpg' alt='')
+                                            | Симоненко Максим
+                                        div 12.12.1987
+                                        div
+                                            .b-teams__player-more.js-show-player Подробнее
+                                            .b-teams__player-box
+                                                .b-teams__player-avatar
+                                                    img(src='./images/player@2x.jpg' alt='')
+                                                    span A
+                                                .b-teams__player-name Симоненко Максим
+                                                .b-teams__player-info г. Барнаул, 27 лет
+                                                .b-teams__player-text
+                                                    b Статистика
+                                                    span Сезон 2019-2020
+                                                .b-teams__player-data
+                                                    div
+                                                        b Г
+                                                        = ' '
+                                                        | 15
+                                                    div
+                                                        b П
+                                                        = ' '
+                                                        | 7
+                                                    div
+                                                        b О
+                                                        = ' '
+                                                        | 25
+                                                .b-teams__player-statistic.js-statistic-player-popup Полная статисткика
+                                                .b-teams__player-close.js-close-player
+                                    .b-teams__player-item
+                                        div 99
+                                        div
+                                            img(src='./images/coach@2x.jpg' alt='')
+                                            | Симоненко Максим
+                                        div 12.12.1987
+                                        div
+                                            .b-teams__player-more.js-show-player Подробнее
+                                            .b-teams__player-box
+                                                .b-teams__player-avatar
+                                                    img(src='./images/player@2x.jpg' alt='')
+                                                    span A
+                                                .b-teams__player-name Симоне Максим
+                                                .b-teams__player-info г. Барнаул, 28 лет
+                                                .b-teams__player-text
+                                                    b Статистика
+                                                    span Сезон 2019-2020
+                                                .b-teams__player-data
+                                                    div
+                                                        b Г
+                                                        = ' '
+                                                        | 20
+                                                    div
+                                                        b П
+                                                        = ' '
+                                                        | 72
+                                                    div
+                                                        b О
+                                                        = ' '
+                                                        | 02
+                                                .b-teams__player-statistic.js-statistic-player-popup Полная статисткика
+                                                .b-teams__player-close.js-close-player
+                    .b-teams__list
+                        .b-teams__games
+                            .b-teams__game
+                                .b-table
+                                    .b-table__title-time 2 сен, пн
+                                    +b-table-item--complete
+                                    +b-table-item--soon
+                                .b-table
+                                    .b-table__title-time 2 сен, пн
+                                    +b-table-item--complete
+                                    +b-table-item--soon
+                                    +b-table-item--complete
+                                    +b-table-item--soon
+        // Новости
+        .b-popup.b-popup--news
+            .b-popup__close.js-close-popup-sm
+            .b-news-detail
+                time 24 ноября 2019
+                h1 Первый матч в чемпионате по второй группе СкиФ завершил уверенной победой
+                p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
+                img(src='./images/popup_img@2x.jpg' alt='')
+                p Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед. Тренировка прошла довольно таки бодро, как будто и не было лета, а его, кстати, по факту-то и небыло на Алтае в этом году. Зимы пока тоже нету, но это не мешает Леониду Леонидовичу и команде первыми готовить лед.
     // script(src='https://www.youtube.com/iframe_api')
     // script(async defer src="https://maps.googleapis.com/maps/api/js?key=")
     script(async defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")

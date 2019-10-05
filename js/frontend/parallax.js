@@ -32,6 +32,8 @@ function Parallax(options){
   return this;
 }
 
-window.addEventListener('load', function(){
-  new Parallax();
+window.addEventListener('load', function() {
+  if (!window.matchMedia('(max-width: 1200px)').matches) {
+    new Parallax();
+  }
 });

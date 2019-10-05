@@ -239,7 +239,10 @@
 
 .b-calendar__cell-inner {
   .games {
-    width: 100%;
+    width: 160px;
+    @include bp($bp-ipad-1024) {
+      width: 100%;
+    }
   }
 
   .games__wrap {
@@ -456,7 +459,13 @@
   }
 
   .games--default {
+    margin-top: 10px;
     width: 100%;
+    cursor: pointer;
+
+    @include bp($bp-1240) {
+      margin-top: 0;
+    }
 
     .games__wrap {
       padding-top: 12px;
@@ -571,6 +580,8 @@
   left: 0;
   display: flex;
   align-items: center;
+  cursor: pointer;
+
   span {
     margin-left: 10px;
     font-size: 14px;

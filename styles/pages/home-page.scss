@@ -1,9 +1,9 @@
 .home-page {
   aside {
+    padding: 0;
     @include bp($bp-ipad-1024) {
       display: flex;
       flex-wrap: wrap;
-      padding: 0;
 
       .b-main-box {
         margin-top: 0;
@@ -25,6 +25,7 @@
   overflow: hidden;
 
   @include bp($bp-640) {
+    max-height: 700px;
     min-height: 620px;
   }
 }
@@ -58,7 +59,7 @@
   background-size: cover;
   background-image: url("../images/fullpage/ice.png");
 
-  @include bp($bp-640) {
+  @include bp($bp-ipad-1024) {
     background-position: center;
   }
 }
@@ -73,14 +74,10 @@
   right: -210px;
   margin: auto;
 
-  @include bp($bp-ipad-1024) {
-    left: 72%;
-  }
-
   @include bp($bp-640) {
     background-size: cover;
-    left: 50%;
     width: 100%;
+    right: 0;
     height: 358px;
     bottom: 144px;
   }
@@ -95,6 +92,10 @@
   width: 151px;
   height: 113px;
   background-image: url("../images/fullpage/puck.png");
+
+  @include bp($bp-ipad-1024) {
+    right: -68%;
+  }
 
   @include bp($bp-640) {
     width: 75px;

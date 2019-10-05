@@ -11,6 +11,7 @@
   align-items: center;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 
   &:after {
     content: '';
@@ -54,21 +55,13 @@
   }
 }
 
-.custom-popup--sm {
-  .tingle-modal-box {
-    max-width: 680px;
-  }
-}
-
-.custom-popup--lg {
+.custom-popup--calendar {
   @include bp($bp-1240) {
     padding-left: 10px;
     padding-right: 10px;
   }
 
   @include bp($bp-640) {
-
-
     &.tingle-modal--overflow {
       padding: 0;
     }
@@ -76,5 +69,21 @@
 
   .tingle-modal-box {
     max-width: 1300px;
+  }
+}
+
+.custom-popup--lg {
+  .tingle-modal-box {
+    max-width: 900px;
+  }
+}
+
+.custom-popup--sm {
+  &.tingle-modal {
+    z-index: 10000;
+  }
+
+  .tingle-modal-box {
+    max-width: 680px;
   }
 }

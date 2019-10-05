@@ -120,6 +120,13 @@
   }
 }
 
+.b-main-box__list--news {
+  margin-bottom: 40px;
+  @include bp($bp-ipad-1024) {
+    margin-bottom: 30px;
+  }
+}
+
 .b-main-box__select {
   width: 270px;
 

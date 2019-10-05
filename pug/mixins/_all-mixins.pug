@@ -1,20 +1,21 @@
 mixin b-grid__matchup()
     .b-grid__matchup
         .b-grid__team-number.b-grid__team-number--mobile счет  1:8
-        a(href='').b-grid__team
+        .b-grid__team
             .b-grid__team-number 8D
-            .b-grid__team-name
+            .b-grid__team-name.js-teams-popup
                 .b-grid__team-ico
                     img(src='./images/teams/team_1-sm.png' alt='')
                 | Ирбис
             .b-grid__team-number.b-grid__team-number--desktop 1
-        a(href='').b-grid__team
+        .b-grid__team
             .b-grid__team-number 8D
-            .b-grid__team-name
+            .b-grid__team-name.js-teams-popup
                 .b-grid__team-ico
                     img(src='./images/teams/team_2-sm.png' alt='')
                 | Ястребы
             .b-grid__team-number.b-grid__team-number--desktop 1
+
 mixin b-table--season()
     .b-table
         .b-table__title-time 11 мая, пн
@@ -38,8 +39,65 @@ mixin b-table-item--season()
                 a(href='').b-table__item-icon.b-table__item-icon--video
                 a(href='').b-table__item-icon.b-table__item-icon--docs
 
-        div.js-statistic-popup 5 : 0
+        div
+            p.js-statistic-popup 5 : 0
         div Завершен
+
+mixin b-table-item--complete()
+        .b-table__item
+            div 21:10
+            div
+                p
+                    span
+                        img(src='./images/teams/team_1-lg.png' alt='')
+                    | Балтика -
+                p
+                    span
+                        img(src='./images/teams/team_2-lg.png' alt='')
+                    | Красные Крылья
+            div
+                p.js-statistic-popup Счет 5 : 0
+            div
+                .b-table__label.b-table__label--complete завершен
+
+mixin b-table-item--soon()
+    .b-table__item
+        div 21:10
+        div
+            p
+                span
+                    img(src='./images/teams/team_1-lg.png' alt='')
+                | Балтика -
+            p
+                span
+                    img(src='./images/teams/team_2-lg.png' alt='')
+                | Красные Крылья
+        div
+            p.js-statistic-popup Счет 5 : 0
+        div
+            .b-table__label.b-table__label--soon скоро
+
+mixin b-table-item--home(isDefault)
+    .b-table__item
+        div 21:10
+        div
+            p.js-teams-popup
+                span
+                    -if(isDefault)
+                        img(src='./images/teams/team-default.png' alt='')
+                    -else
+                        img(src='./images/teams/team_1-lg.png' alt='')
+                | Балтика -
+            p.js-teams-popup
+                span
+                    img(src='./images/teams/team_2-lg.png' alt='')
+                | Красные Крылья
+        div 1п (0:0)
+        div 2п (0:0)
+        div 3п (0:0)
+        div Счет 0 : 0
+        div Группа А
+
 mixin game-payload(isCount, isVideo, isDocs)
     .games.games--payload
         .games__wrap
@@ -113,5 +171,17 @@ mixin calendar-column-item(isDefault)
             -if(isDefault)
                 +game-default
 
+
+mixin player(isDefault)
+    .player
+        .player__avatar
+            -if(isDefault)
+                img(src='./images/icon-player-default.png' alt='')
+            -else
+                img(src='http://www.kuban.nhliga.org/data/images/players/small/40549_Pogrebnyak_20181026104538.jpg' alt='')
+        .player__name
+            p Канайкин Роман1
+            span Скиф
+        .player__count 24 гола
 
 

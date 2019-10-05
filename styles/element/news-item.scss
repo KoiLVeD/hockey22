@@ -79,10 +79,19 @@
     color: $cornflower-blue;
     cursor: pointer;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
     @include bp($bp-540) {
       position: relative;
       font-size: 0;
       //margin-left: auto;
+
+      &:hover {
+        text-decoration: none;
+      }
+
 
       &:after {
         position: absolute;

@@ -129,6 +129,12 @@
       display: flex;
       align-items: center;
       width: 288px;
+      cursor: pointer;
+      transition: .3s ease-in-out color;
+
+      &:hover {
+        color: $cornflower-blue;
+      }
 
       @include bp($bp-ipad-1024) {
         width: 254px;
@@ -259,8 +265,15 @@
     p {
       display: flex;
       align-items: center;
+      justify-content: center;
       margin: 0;
       white-space: nowrap;
+      cursor: pointer;
+      transition: .3s ease-in-out color;
+
+      &:hover {
+        color: $cornflower-blue;
+      }
 
       span {
         position: relative;
