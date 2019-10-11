@@ -50,17 +50,57 @@
   }
 }
 
-.home-page__ice {
+.home-page__splinters {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 648px;
   background-size: cover;
-  background-image: url("../images/fullpage/ice.png");
+  background-image: url("../images/fullpage/splinters.png");
+
+  @include bp($bp-640) {
+    display: none;
+  }
+}
+
+.home-page__ice-min {
+  opacity: 0.35;
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 467px;
+  height: 444px;
+  background-size: cover;
+  background-image: url("../images/fullpage/ice-min.png");
+
+  @include bp($bp-ipad-1024) {
+    display: none;
+  }
+}
+
+.home-page__ice {
+  position: absolute;
+  top: 90px;
+  left: -400px;
+  right: 0;
+  bottom: 0;
+  width: 1200px;
+  height: 862px;
+  margin: auto;
+  background-size: cover;
+  background-image: url("../images/fullpage/ice_1.png");
 
   @include bp($bp-ipad-1024) {
     background-position: center;
+  }
+
+  @include bp($bp-640) {
+    top: 300px;
+  }
+
+  @include bp($bp-375) {
+    top: 350px;
   }
 }
 
