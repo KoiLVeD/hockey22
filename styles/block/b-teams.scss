@@ -128,7 +128,6 @@
       display: flex;
       align-items: center;
       font-weight: 500;
-      cursor: pointer;
 
       @include bp($bp-640) {
         width: 100%;

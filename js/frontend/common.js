@@ -44,22 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
       target.parentNode.classList.remove('b-teams__player-box--show')
     }
   })
-
-  // [...btnShowPlayers].forEach((button) => {
-  //   button.addEventListener('click', () => {
-  //     [...teamBoxes].forEach((box) => {
-  //       box.classList.remove('b-teams__player-box--show')
-  //     });
-  //     button.nextElementSibling.classList.add('b-teams__player-box--show')
-  //   });
-  // });
-  //
-  // [...btnClosePlayers].forEach((button) => {
-  //   button.addEventListener('click', () => {
-  //     button.parentNode.classList.remove('b-teams__player-box--show')
-  //   });
-  // });
-
   function clickOutside(e) {
     if (e.target.classList.contains('js-show-player')) {
       return

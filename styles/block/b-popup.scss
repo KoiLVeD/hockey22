@@ -56,6 +56,10 @@
 }
 
 .custom-popup--calendar {
+  &.tingle-modal {
+    z-index: 10000;
+  }
+
   @include bp($bp-1240) {
     padding-left: 10px;
     padding-right: 10px;
@@ -73,6 +77,10 @@
 }
 
 .custom-popup--lg {
+  &.tingle-modal {
+    z-index: 10001;
+  }
+
   .tingle-modal-box {
     max-width: 900px;
   }
@@ -80,7 +88,7 @@
 
 .custom-popup--sm {
   &.tingle-modal {
-    z-index: 10000;
+    z-index: 10002;
   }
 
   .tingle-modal-box {

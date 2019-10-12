@@ -4,12 +4,6 @@ const modalCalendar = new tingle.modal({
   stickyFooter: false,
   closeMethods: ['overlay', 'escape'],
   cssClass: ['custom-popup', 'custom-popup--calendar'],
-  // onOpen: function() {
-  //   console.log('modal open');
-  // },
-  // onClose: function() {
-  //   console.log('modal closed');
-  // },
   beforeClose: function() {
     return true; // close the modal
     return false; // nothing happens
@@ -20,11 +14,6 @@ const modalTypeLg = new tingle.modal({
   stickyFooter: false,
   closeMethods: ['overlay', 'escape'],
   cssClass: ['custom-popup', 'custom-popup--lg'],
-  beforeOpen(modal) {
-    // console.log(this);
-    // console.log(modal);
-    // this.cssClass.push('sdfsdfsfsf')
-  },
   beforeClose: function() {
     return true; // close the modal
     return false; // nothing happens
@@ -85,21 +74,15 @@ let newsBtn = document.querySelectorAll('.js-news-popup');
 });
 
 document.addEventListener('click', function (event) {
-  const target = event.target
+  const target = event.target;
   console.log(target);
+
   /* ----------------------------------------------------------- */
   /* Статистика игрока */
   /* ----------------------------------------------------------- */
   if (target.matches('.js-statistic-player-popup')) {
     modalTypeSm.open();
     modalTypeSm.setContent(document.querySelector('.b-popup--statistic-player').innerHTML);
-  }
-  /* ----------------------------------------------------------- */
-  /* Команды */
-  /* ----------------------------------------------------------- */
-  if (target.matches('.js-teams-popup')) {
-    modalTypeLg.open();
-    modalTypeLg.setContent(document.querySelector('.b-popup--teams').innerHTML);
   }
   /* ----------------------------------------------------------- */
   /* Статистика матча*/
@@ -116,5 +99,12 @@ document.addEventListener('click', function (event) {
   }
   if (target.matches('.js-close-popup-lg')) {
     modalTypeLg.close();
+  }
+  /* ----------------------------------------------------------- */
+  /* Команды */
+  /* ----------------------------------------------------------- */
+  if (target.closest('.js-teams-popup').matches('.js-teams-popup')) {
+    modalTypeLg.open();
+    modalTypeLg.setContent(document.querySelector('.b-popup--teams').innerHTML);
   }
 });

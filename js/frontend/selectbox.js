@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (isTab) {
     choices.passedElement.element.addEventListener('choice', function(value, keyCode) {
-      // do something creative here...
       const isTabVersion = this.classList.contains('js-choice-version-tab');
       if (isTabVersion) {
         const currentId = value.detail.choice.id

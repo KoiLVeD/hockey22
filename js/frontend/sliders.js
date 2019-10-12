@@ -1,8 +1,6 @@
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', function() {
-  //let gameSlider = document.querySelector('.js-slider-games');
-
   let gameSwiper = new Swiper('.js-game-slider', {
     effect: 'fade',
     navigation: {
