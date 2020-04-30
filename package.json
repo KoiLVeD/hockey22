@@ -56,7 +56,7 @@
     "has-flag": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
     "imports-loader": "^0.8.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "postcss-assets": "^5.0.0",
     "postcss-custom-media": "^7.0.8",
     "postcss-flexbugs-fixes": "^4.1.0",
