@@ -65,7 +65,7 @@
     "simplebar": "^4.3.0-alpha.0",
     "slick-carousel": "^1.8.1",
     "style-loader": "^1.0.0",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-stream": "^5.2.1"
   },
